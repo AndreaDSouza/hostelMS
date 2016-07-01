@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link href="../style.css" type="text/css" rel="stylesheet" > 
+        <script src = "../angular.min.js"></script>
+        <script src = "app-client.js"></script>
+    <title>Application form</title>
+    </head>
+    <body ng-app = "hostelClient">
+        <h1>Application Form</h1>
+            <div ng-controller = "mainController">
+                <div ng-repeat = "(key,value) in applicantDetails">
+                    <div class = "left"> {{value[0]}} </div>
+                    <input class = "right" type = "text" ng-model = "value[1]">
+                </div>
+            </div>
+    </body>
+</html>

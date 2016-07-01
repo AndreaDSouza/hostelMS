@@ -1,0 +1,10 @@
+[
+    {   
+        studentName:["Student Name",'Paul Joshy K'],
+        admissionNo:["Admission Number",'130419'],
+        regNo:["Register Number",'14BCA4235'],
+        course:["Course",'BCA'],
+        semester:["Semester",'5th Sem']
+    }
+
+]
