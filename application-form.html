@@ -8,10 +8,8 @@
     <body ng-app = "hostelMS">
         <h1>Application Form</h1>
         <div ng-controller = "mainController">
-            <div class = "textinput" ng-repeat = "name in names" ng-repeat = "(key,value) in people">
-                <div class = "left"> {{name}} </div> 
-                <input class = "right"type = "text" ng-model = people.key>
-            </div>
+            <input-item ng-repeat = "(key,value) in applicants">
+            </input-item>
         </div>
     </body>
 </html>

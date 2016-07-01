@@ -2,17 +2,20 @@
 var hostelMS = angular.module("hostelMS",[]);
 
 hostelMS.controller('mainController',["$scope",function($scope){
-    $scope.people = people;
-    $scope.names = names;
+    $scope.applicants = applicants;
 }]);
 
-var people = 
-{
-    studentName:'',
-    admissionNo:'',
-    regNo:'',
-    course:'',
-    semester:'',
-}
+hostelMS.directive("inputItem",function(){
+    return{
+        template:'<div class = "left" > {{value[0]}} </div> <input class = "right"type = "text" ng-model = "value[1]">'
+    }
+});
 
-var names = ["Student Name", "Admission Number", "Register Number", "Course", "Semester"];
+var applicants = 
+{
+    studentName:["Student Name",''],
+    admissionNo:["Admission Number",''],
+    regNo:["Register Number",''],
+    course:["Course",''],
+    semester:["Semester",'']
+};
