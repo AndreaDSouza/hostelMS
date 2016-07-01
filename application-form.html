@@ -7,9 +7,10 @@
     </head>
     <body ng-app = "hostelMS">
         <h1>Application Form</h1>
-        <div ng-controller = "mainController">
-            <input-item ng-repeat = "(key,value) in applicants">
-            </input-item>
-        </div>
+            <div ng-controller = "mainController">
+                <div ng-repeat = "(key,value) in people">
+                    <div class = "left" > {{value[0]}} </div> <input class = "right"type = "text" ng-model = "value[1]">
+                </div>
+            </div>
     </body>
 </html>
