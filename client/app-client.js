@@ -1,4 +1,3 @@
-
 var hostelClient = angular.module("hostelClient",[]);
 
 hostelClient.controller('mainController',["$scope",function($scope){
