@@ -1,10 +1,35 @@
 [
-    {   
-        studentName:["Student Name",'Paul Joshy K'],
-        admissionNo:["Admission Number",'130419'],
-        regNo:["Register Number",'14BCA4235'],
-        course:["Course",'BCA'],
-        semester:["Semester",'5th Sem']
+    {
+        "name":'Paul Joshy',
+        "regNo":'14BCA4235',
+        "studentDetails":
+        {
+            "semester":'5',
+            "religion":'Christian',
+            "caste":'Catholic',
+            "bloodGroup":"O+ve",
+            "mobileNo":"+919663336318",
+            "dob":"8/11/1996",
+            "email":"pauljoshyk96@gmail.com",
+        },
+        "otherDetails":
+        {
+            
+        }
+    },
+    
+    {
+        "name":'Paul Joshy',
+        "regNo":'14BCA4235',
+        "studentDetails":
+        {
+            "semester":'5',
+            "religion":'Christian',
+            "caste":'Catholic',
+            "bloodGroup":"O+ve",
+            "mobileNo":"+919663336318",
+            "dob":"8/11/1996",
+            "email":"pauljoshyk96@gmai.com",
+        }
     }
-
 ]
