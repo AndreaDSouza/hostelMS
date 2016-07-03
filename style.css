@@ -5,18 +5,20 @@ body
 
 form
 {
-    width:400px;
-    margin: 0 auto;
+    width: 400px;
+    margin: auto;
 }
 
 .left {
-    float:left;
-    height: 3%;
+    height: 3.3%;
     display: inline-block;
 }
 
 .right{
-    float:
+    display: inline-block;
+    float: right;
 }
 
-
+hr{
+    
+}
