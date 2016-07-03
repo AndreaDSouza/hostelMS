@@ -10,13 +10,13 @@ form
 }
 
 .left {
-    float:left;
-    height: 3%;
+    height: 5%;
     display: inline-block;
+    
 }
 
-.right{
-    float:
+.right {
+ float:right;
+    height: 3%;
+    display: inline-block;   
 }
-
-
