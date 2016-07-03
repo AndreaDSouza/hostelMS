@@ -1,13 +1,22 @@
-.left{
-    display: inline-block;
+body
+{
+    text-align: center;
+}
+
+form
+{
+    width:400px;
+    margin: 0 auto;
+}
+
+.left {
+    float:left;
     height: 3%;
-    
+    display: inline-block;
 }
 
 .right{
-    display: inline-block;
-    float: right;
-    padding: 0px;
-    width: 85%;
-    margin-right: 3%;
+    float:
 }
+
+

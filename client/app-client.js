@@ -4,12 +4,6 @@ hostelClient.controller('mainController',["$scope",function($scope){
     $scope.applicantDetails = applicantDetails;
 }]);
 
-
-var applicantDetails = 
-{
-    studentName:["Student Name",''],
-    admissionNo:["Admission Number",''],
-    regNo:["Register Number",''],
-    course:["Course",''],
-    semester:["Semester",'']
-};
+hostelClient.directive("inputElement",function(){
+                <input class = "right" type = "text" ng-model = "value[1]">
+});
