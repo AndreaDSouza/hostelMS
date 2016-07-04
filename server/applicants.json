@@ -1,35 +1,50 @@
 [
     {
-        "name":'Paul Joshy',
-        "regNo":'14BCA4235',
+        "name":"",
+        "regNo":"",
         "studentDetails":
         {
-            "semester":'5',
-            "religion":'Christian',
-            "caste":'Catholic',
-            "bloodGroup":"O+ve",
-            "mobileNo":"+919663336318",
-            "dob":"8/11/1996",
-            "email":"pauljoshyk96@gmail.com",
+            "semester":"",
+            "entryYear":"",
+            "religion":"",
+            "caste":"",
+            "bloodGroup":"",
+            "mobileNo":"",
+            "dob":"",
+            "email":""
         },
         "otherDetails":
         {
+            "address":"",
+            "city":"",
+            "state":"",
+            "pinCode":"",
+        
+            "father":
+            {
+                "name":"",
+                "occupation":"",
+                "email":"",
+                "mobileNo":"",
+            },
+            "mother":
+            {
+                "name":"",
+                "occupation":"",
+                "email":"",
+                "mobileNo":"",
+            },
+            "guardian":
+            {
+                "name":"",
+                "occupation":"",
+                "email":"",
+                "address":"",
+                "city":"",
+                "state":"",
+                "mobileNo":"",
+            },
             
-        }
-    },
-    
-    {
-        "name":'Paul Joshy',
-        "regNo":'14BCA4235',
-        "studentDetails":
-        {
-            "semester":'5',
-            "religion":'Christian',
-            "caste":'Catholic',
-            "bloodGroup":"O+ve",
-            "mobileNo":"+919663336318",
-            "dob":"8/11/1996",
-            "email":"pauljoshyk96@gmail.com",
         }
     }
 ]
