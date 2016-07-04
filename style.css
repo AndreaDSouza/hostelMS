@@ -5,8 +5,8 @@ body
 
 form
 {
-    width:400px;
-    margin: 0 auto;
+    width: 400px;
+    margin: auto;
 }
 
 .left {
@@ -16,7 +16,7 @@ form
 }
 
 .right {
- float:right;
+    float:right;
     height: 3%;
     display: inline-block;   
 }

@@ -11,123 +11,119 @@
         <div ng-controller = "formCtrl">
             <form>
                 <div>
-                <label class = "left"> Student Name</label>
-                <input class = "right" type = "text">
+                    <label class = "left"> Student Name</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.name">
                 </div>
-            <div>
-                <div class = "left"> Register No</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Semester</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Year of Entry to Hostel</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Religion</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Caste</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Blood Group</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Mobile No</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Date of Birth</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Email</div>
-                <input class = "right" type = "text">
-            </div>
-            <hr>
-            <div>
-                <div class = "left"> Father's Name</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Occupation</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Email</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Mother's Name</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Occupation</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Email</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Permanent Address</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> City</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> State</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Pin Code</div>
-                <input class = "right" type = "text">
-            </div>
-            <hr>
-            <div>
-                <div class = "left"> Local Guardian</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Occupation</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Email</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Email</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Mobile No</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Address</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> City</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> State</div>
-                <input class = "right" type = "text">
-            </div>
-            <div>
-                <div class = "left"> Pin Code</div>
-                <input class = "right" type = "text">
-            </div>
+                <div>
+                    <label class = "left"> Register No</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.regNo">
+                </div>
+                <div>
+                    <label class = "left"> Semester</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.semester">
+                </div>
+                <div>
+                    <label class = "left"> Year of Entry to Hostel</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.entryYear">
+                </div>
+                <div>
+                    <label class = "left"> Religion</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.religion">
+                </div>
+                <div>
+                    <label class = "left"> Caste</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.caste">
+                </div>
+                <div>
+                    <label class = "left"> Blood Group</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.bloodGroup">
+                </div>
+                <div>
+                    <label class = "left"> Mobile No</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.mobileNo">
+                </div>
+                <div>
+                    <label class = "left"> Date of Birth</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.dob">
+                </div>
+                <div>
+                    <label class = "left"> Email</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.email">
+                </div>
+                <hr>
+                <div>
+                    <label class = "left"> Father's Name</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.father.name">
+                </div>
+                <div>
+                    <label class = "left"> Occupation</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.father.occupation">
+                </div>
+                <div>
+                    <label class = "left"> Email</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.father.email">
+                </div>
+                <div>
+                    <label class = "left"> Mother's Name</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.mother.name">
+                </div>
+                <div>
+                    <label class = "left"> Occupation</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.mother.occupation">
+                </div>
+                <div>
+                    <label class = "left"> Email</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.mother.email">
+                </div>
+                <div>
+                    <label class = "left"> Permanent Address</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.address">
+                </div>
+                <div>
+                    <label class = "left"> City</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.city">
+                </div>
+                <div>
+                    <label class = "left"> State</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.state">
+                </div>
+                <div>
+                    <label class = "left"> Pin Code</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.pinCode">
+                </div>
+                <hr>
+                <div>
+                    <label class = "left"> Local Guardian</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.name">
+                </div>
+                <div>
+                    <label class = "left"> Occupation</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.occupation">
+                </div>
+                <div>
+                    <label class = "left"> Email</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.email">
+                </div>
+                <div>
+                    <label class = "left"> Mobile No</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.mobileNo">
+                </div>
+                <div>
+                    <label class = "left"> Address</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.address">
+                </div>
+                <div>
+                    <label class = "left"> City</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.city">
+                </div>
+                <div>
+                    <label class = "left"> State</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.state">
+                </div>
+                <div>
+                    <label class = "left"> Pin Code</label>
+                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.pinCode">
+                </div>
             </form>
             <hr>
             

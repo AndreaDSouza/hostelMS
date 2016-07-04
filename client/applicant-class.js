@@ -1,4 +1,49 @@
-var Applicant = function(){};
-var applicationDetails = new Applicant();
-applicationDetails.name = "Pinto";
-console.log(applicationDetails);
+var appDetails = 
+    {
+        name:"",
+        regNo:"",
+        studentDetails:
+        {
+            semester:"",
+            entryYear:"",
+            religion:"",
+            caste:"",
+            bloodGroup:"",
+            mobileNo:"",
+            dob:"",
+            email:""
+        },
+        otherDetails:
+        {
+            address:"",
+            city:"",
+            state:"",
+            pinCode:"",
+            
+            father:
+            {
+                name:"",
+                occupation:"",
+                email:"",
+                mobileNo:"",
+            },
+            mother:
+            {
+                name:"",
+                occupation:"",
+                email:"",
+                mobileNo:"",
+            },
+            guardian:
+            {
+                name:"",
+                occupation:"",
+                email:"",
+                address:"",
+                city:"",
+                state:"",
+                mobileNo:"",
+            },
+            
+        }
+    };
