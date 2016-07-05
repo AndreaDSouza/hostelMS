@@ -16,6 +16,23 @@ hostelClient.controller('formCtrl',["$scope","$http",function($scope,$http){
         {
             console.log("Whoops!");
         });
-    };
+    }
+    
+    $scope.outputStuff = function outputStuff(){
+    
+        console.log("Please work!");
+        
+    }
+    
+}]);
+
+hostelClient.controller('test',["$scope",function($scope)
+{
+    
+    $scope.outputStuff = function outputStuff(){
+    
+        console.log("Please work!");
+        
+    }
     
 }]);
