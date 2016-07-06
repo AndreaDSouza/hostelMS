@@ -11,7 +11,6 @@ hostelClient.controller('formCtrl',["$scope","$http",function($scope,$http){
         {
             console.log("Nailed it!");
         })
-
         .error(function (data,status)
         {
             console.log("Whoops!");
