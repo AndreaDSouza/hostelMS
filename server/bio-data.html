@@ -9,132 +9,124 @@
     </head>
     <body>
         <h1>BIO DATA</h1>
-        <div ng-app="hostelServer">
+        <div ng-app="hostelServer"ng-controller = "biodataCtrl">
             <form>
-                <div ng-controller = "biodataCtrl">
-                    <label class = "left"> Student Name</label>
-                    <div class = "right">{{ results.name }}</div> 
-                </div>
-            </form>
-        </div>
-                    
-                        
-                <!--div
-                    <label class = "left"> Register No</label>
-                    <div class = "right" ng-model = "appDetails.regNo">
+                <div>
+                    <label class = "left">Student Name</label>
+                    <div class = "right">{{ result[0].name }}</div> 
                 </div>
                 <div>
-                    <label class = "left"> Semester</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.semester">
+                    <label class = "left">Register No</label>
+                    <div class = "right">{{ result[0].regNo }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Year of Entry to Hostel</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.entryYear">
+                    <label class = "left">Semester</label>
+                    <div class = "right">{{ result[0].studentDetails.semester }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Religion</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.religion">
+                    <label class = "left">Year of Entry to Hostel</label>
+                    <div class = "right">{{ result[0].studentDetails.entryYear }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Caste</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.caste">
+                    <label class = "left">Religion</label>
+                    <div class = "right">{{ result[0].studentDetails.religion }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Blood Group</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.bloodGroup">
+                    <label class = "left">Caste</label>
+                    <div class = "right">{{ result[0].studentDetails.caste }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Mobile No</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.mobileNo">
+                    <label class = "left">Blood Group</label>
+                    <div class = "right">{{ result[0].studentDetails.bloodGroup }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Date of Birth</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.dob">
+                    <label class = "left">Mobile No</label>
+                    <div class = "right">{{ result[0].studentDetails.mobileNo }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Email</label>
-                    <div class = "right" ng-model = "appDetails.studentDetails.email">
+                    <label class = "left">Date of Birth</label>
+                    <div class = "right">{{ result[0].studentDetails.dob }}</div>
+                </div>
+                <div>
+                    <label class = "left">Email</label>
+                    <div class = "right">{{ result[0].studentDetails.email }}</div>
                 </div>
                 <hr>
                 <div>
-                    <label class = "left"> Father's Name</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.father.name">
+                    <label class = "left">Father's Name</label>
+                    <div class = "right">{{ result[0].otherDetails.father.name }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Occupation</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.father.occupation">
+                    <label class = "left">Occupation</label>
+                    <div class = "right">{{ result[0].otherDetails.father.occupation }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Email</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.father.email">
+                    <label class = "left">Email</label>
+                    <div class = "right">{{ result[0].otherDetails.father.email }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Mother's Name</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.mother.name">
+                    <label class = "left">Mother's Name</label>
+                    <div class = "right">{{ result[0].otherDetails.mother.name }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Occupation</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.mother.occupation">
+                    <label class = "left">Occupation</label>
+                    <div class = "right">{{ result[0].otherDetails.mother.occupation }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Email</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.mother.email">
+                    <label class = "left">Email</label>
+                    <div class = "right">{{ result[0].otherDetails.mother.email }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Permanent Address</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.address">
+                    <label class = "left">Permanent Address</label>
+                    <div class = "right">{{ result[0].otherDetails.address }}</div>
                 </div>
                 <div>
-                    <label class = "left"> City</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.city">
+                    <label class = "left">City</label>
+                    <div class = "right">{{ result[0].otherDetails.city }}</div> 
                 </div>
                 <div>
-                    <label class = "left"> State</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.state">
+                    <label class = "left">State</label>
+                    <div class = "right">{{ result[0].otherDetails.state }}</div> 
                 </div>
                 <div>
-                    <label class = "left"> Pin Code</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.pinCode">
+                    <label class = "left">Pin Code</label>
+                    <div class = "right">{{ result[0].otherDetails.pinCode }}</div>
                 </div>
                 <hr>
                 <div>
-                    <label class = "left"> Local Guardian</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.name">
+                    <label class = "left">Local Guardian</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.name }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Occupation</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.occupation">
+                    <label class = "left">Occupation</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.occupation }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Email</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.email">
+                    <label class = "left">Email</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.email }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Mobile No</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.mobileNo">
+                    <label class = "left">Mobile No</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.mobileNo }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Address</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.address">
+                    <label class = "left">Address</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.address }}</div>
                 </div>
                 <div>
-                    <label class = "left"> City</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.city">
+                    <label class = "left">City</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.city }}</div>
                 </div>
                 <div>
-                    <label class = "left"> State</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.state">
+                    <label class = "left">State</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.state }}</div>
                 </div>
                 <div>
-                    <label class = "left"> Pin Code</label>
-                    <div class = "right" ng-model = "appDetails.otherDetails.guardian.pinCode">
+                    <label class = "left">Pin Code</label>
+                    <div class = "right">{{ result[0].otherDetails.guardian.pinCode }}</div>
                 </div>
-                <button ng-click = "postJSON">Post</button>
             </form>
             <hr>
-            
-        </div-->
-                    
-                    
+        </div>
     </body>
 </html>
