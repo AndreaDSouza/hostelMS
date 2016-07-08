@@ -1,0 +1,29 @@
+{
+    
+    "key" : "",
+    
+    "bioData" : {
+        
+        "basic" : {
+            "name" : "",
+            "regNo" : "",
+        },
+        
+        "studentDetails" :
+        {
+            "semester":"",
+            "entryYear":"",
+            "religion":"",
+            "caste":"",
+            "bloodGroup":"",
+            "mobileNo":"",
+            "dob":"",
+            "email":""
+        }
+        
+    },
+    
+    "attendance" : {
+        
+    }
+}

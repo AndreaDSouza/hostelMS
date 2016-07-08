@@ -19,20 +19,19 @@
             "city":"",
             "state":"",
             "pinCode":"",
-        
             "father":
             {
                 "name":"",
                 "occupation":"",
                 "email":"",
-                "mobileNo":"",
+                "mobileNo":""
             },
             "mother":
             {
                 "name":"",
                 "occupation":"",
                 "email":"",
-                "mobileNo":"",
+                "mobileNo":""
             },
             "guardian":
             {
@@ -42,9 +41,8 @@
                 "address":"",
                 "city":"",
                 "state":"",
-                "mobileNo":"",
-            },
-            
+                "mobileNo":""
+            }
         }
     }
 ]
