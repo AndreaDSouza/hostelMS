@@ -1,6 +1,6 @@
-body
+h1
 {
-    text-align: center;
+    text-align:center;
 }
 
 form
@@ -12,11 +12,10 @@ form
 .left {
     height: 5%;
     display: inline-block;
-    
 }
 
 .right {
-    float:right;
+    float: right;
     height: 3%;
     display: inline-block;   
 }

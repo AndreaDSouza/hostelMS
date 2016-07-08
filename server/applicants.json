@@ -41,7 +41,8 @@
                 "address":"",
                 "city":"",
                 "state":"",
-                "mobileNo":""
+                "mobileNo":"",
+                "pinCode":""
             }
         }
     }
