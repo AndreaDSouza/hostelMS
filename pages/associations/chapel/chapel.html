@@ -1,0 +1,25 @@
+<hmtl>
+    <head>
+        <title>Chapel reading list</title>
+        <script src = "/vendor/angular.min.js"></script>
+        <script src = "js/chapel-generator.js"></script>
+        <link rel = "stylesheet" style="text/css" href="css/style.css">
+    </head>
+    <body ng-app = "chapelGenerator">
+        <div ng-controller = "chapelCtrl">
+            <h1>Chapel Reading list</h1>
+            <table>
+                <tr>
+                    <td>Sl.No</td>
+                    <td>Name</td>
+                    <td>Date</td>
+                    <td>Passage</td>
+                </tr>
+            <tr ng-repeat = "person in list">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ person }}</td>
+            </tr>
+            </table>
+        </div>
+    </body>
+</hmtl>
