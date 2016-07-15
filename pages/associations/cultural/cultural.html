@@ -1,13 +1,34 @@
-<hmtl>
+<!DOCTYPE html>
+<html ng-app="calApp">
+    
     <head>
-        <title>Chapel reading list</title>
-        <script src="../angular.min.js"></script>
-        <script src="chapel-generator.js"></script>
+        <title>Cultural team</title>
+        
+        <!-- Vendor JS files -->
+        <script src="/vendor/angular.min.js"></script>
+        
+        <!-- App JS files -->
+        <script src="js/main.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
     </head>
-    <body ng-app = "chapelGenerator">
-        <div ng-controller = "chapelCtrl">
-            <h1>Chapel Reading list</h1>
-            <p>{{result}}</p>
+    
+    <body>
+        
+        <div id="calendarBody" ng-controller="calCtrl">
+            
+            <div ng-repeat="month in appCal.currentYear.months" class="month">
+                <h1>{{month.name}}</h1>
+                <div class="days">{{month.days}}</div>
+            </div>
+            
+            <div ng-repeat="month in appCal.nextYear.months" class="month">
+                <h1>{{month.name}}</h1>
+                <div class="days">{{month.days}}</div>
+            </div>
+            
         </div>
+
     </body>
-</hmtl>
+    
+</html>
