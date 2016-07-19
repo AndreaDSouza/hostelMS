@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Biodata</title>
+        <!--vendors-->
+        <script src = "/vendor/angular.min.js" ></script>
+        <script src = "/vendor/firebase.js" ></script>
+        <!--js files-->
+        <script src = "js/main.js" ></script>
+        <script src = "js/bio-ctrl.js" ></script>
+        <script src = "js/services/db-services.js" ></script>
+    </head>
+    <body>
+        <div ng-app = "bioApp">
+            <div ng-controller = "bioCtrl">{{ result }}</div>
+        </div>
+    </body>
+</html>
