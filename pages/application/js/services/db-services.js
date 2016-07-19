@@ -1,4 +1,4 @@
-hostelClient.service("dbService" , function(){
+hostelClient.service("dbServices" , function(){
 
     var self = this;
     this.bUrl = "https://hostelms.firebaseio.com/";
