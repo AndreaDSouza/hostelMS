@@ -1,0 +1,27 @@
+"general":{
+    
+    "name":"",
+    "rNo":"",
+    "phNo":"",
+    "religion":"",
+    "sect":boolean,
+    "chapel":[
+        
+        {
+            "name":"",
+            "sect":boolean
+        }
+    ],
+    "readingList":[
+    
+        {
+            "name":"",
+            "rNo":"",
+            "phNo":"",
+            "sect":boolean,
+            "date":"",
+            "attendance":boolean
+        }
+    ]
+    
+};

@@ -1,4 +1,4 @@
-hostelClient.controller('formCtrl',["$scope","$log","dbService",function($scope,$log,dbService){
+hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope,$log,dbServices){
 
     $scope.appDetails = {};
     $scope.appDetails.name = "";
@@ -48,6 +48,6 @@ hostelClient.controller('formCtrl',["$scope","$log","dbService",function($scope,
     
     $scope.postJSON = function(){
         console.log("Clicked");
-        dbService.post( "", $scope.appDetails );
+        dbServices.post( "", $scope.appDetails );
     }
 }]);
