@@ -7,7 +7,7 @@
         <!--js files-->
         <script src = "js/main.js"></script>
         <script src = "js/services/db-services.js"></script>
-        <script src = "js/controller/app-client.js"></script>
+        <script src = "js/controller/form-ctrl.js"></script>
         <!--script src = "js/stage/applicant-class.js"></script-->
         
         <link href="css/style.css" type="text/css" rel="stylesheet" > 
@@ -20,7 +20,7 @@
             <form>
                 <div>
                     <label class = "left"> Student Name</label>
-                    <input class = "right" type = "text" ng-model = "applicant.name">
+                    <input class = "right" type = "text" ng-model = "applicant.name" capitalize>
                 </div>
                 <div>
                     <label class = "left"> Register No</label>

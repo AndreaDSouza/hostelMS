@@ -4,6 +4,7 @@ hostelClient.service("dbServices" , function(){
     this.bUrl = "https://hostelms.firebaseio.com/";
     this.post = function( subUrl, toPush )
     {
+        console.log(self.bUrl + subUrl)
         var ref = new Firebase( self.bUrl + subUrl );
         ref.child(toPush.regNo).update(toPush);
     };

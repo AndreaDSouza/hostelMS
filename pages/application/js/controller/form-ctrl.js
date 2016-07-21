@@ -47,13 +47,35 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         }
     };
     
+    $scope.general = {
+        name : $scope.applicant.name,
+        regNo : $scope.applicant.regNo,
+        religion : $scope.applicant.religion,
+        sect : $scope.applicant.sect,
+        phNo: $scope.applicant.phNo
+    };
+    
+    $scope.chapel = {
+        name : $scope.applicant.name,
+        regNo : $scope.applicant.regNo,
+    };
+    
+    $scope.reader = {
+        name : $scope.applicant.name,
+        regNo : $scope.applicant.regNo,
+        phNo: $scope.applicant.phNo
+    }
+    
     
     $scope.postJSON = function(){
         console.log("Clicked");
         dbServices.post( "bioData", $scope.applicant );
         dbServices.post( "generalList", $scope.applicant );
-        if($scope.applicant.religion == "Christian")
-            dbServices.post( "chapel", $scope.applicant );
-        dbServices.post( "readingList", $scope.applicant );
+        
+        if($scope.applicant.religion.toUpperCase() == "CHRISTIAN")
+        {
+            dbServices.post( "chapelList", $scope.chapel );
+            dbServices.post( "readingList", $scope.reader );
+        }
     }
 }]);
