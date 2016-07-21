@@ -7,11 +7,13 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         semester:"",
         entryYear:"",
         religion:"",
+        isCatholic:false,
         caste:"",
         bloodGroup:"",
         mobileNo:"",
         dob:"",
         email:"",
+        
         otherDetails:{
             address:"",
             city:"",
@@ -49,5 +51,9 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
     $scope.postJSON = function(){
         console.log("Clicked");
         dbServices.post( "bioData", $scope.applicant );
+        dbServices.post( "generalList", $scope.applicant );
+        if($scope.applicant.religion == "Christian")
+            dbServices.post( "chapel", $scope.applicant );
+        dbServices.post( "readingList", $scope.applicant );
     }
 }]);

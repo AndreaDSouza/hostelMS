@@ -37,6 +37,10 @@
                 <div>
                     <label class = "left"> Religion</label>
                     <input class = "right" type = "text" ng-model = "applicant.religion">
+                    <div>
+                        <label> catholic </label>
+                        <input type="checkbox" ng-model = "applicant.isCatholic">
+                    </div>
                 </div>
                 <div>
                     <label class = "left"> Caste</label>
@@ -58,7 +62,9 @@
                     <label class = "left"> Email</label>
                     <input class = "right" type = "text" ng-model = "applicant.email">
                 </div>
+                
                 <hr>
+                
                 <div>
                     <label class = "left"> Father's Name</label>
                     <input class = "right" type = "text" ng-model = "applicant.otherDetails.father.name">
@@ -99,7 +105,9 @@
                     <label class = "left"> Pin Code</label>
                     <input class = "right" type = "text" ng-model = "applicant.otherDetails.pinCode">
                 </div>
+                
                 <hr>
+                
                 <div>
                     <label class = "left"> Local Guardian</label>
                     <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.name">
@@ -108,7 +116,7 @@
                     <label class = "left"> Occupation</label>
                     <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.occupation">
                 </div>
-                <di
+                <div>
                     <label class = "left"> Email</label>
                     <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.email">
                 </div>
