@@ -6,11 +6,11 @@
         
         <!--js files-->
         <script src = "js/main.js"></script>
-        <script src = "js/services/db-services.js"></script>
+        <script src = "js/services/db-services.js"></script>ss
         <script src = "js/controller/form-ctrl.js"></script>
         <!--script src = "js/stage/applicant-class.js"></script-->
         
-        <link href="css/style.css" type="text/css" rel="stylesheet" > 
+        <link href = "css/style.css" type = "text/css" rel = "stylesheet" > 
         
     <title>Application Form</title>
     </head>
@@ -37,9 +37,9 @@
                 <div>
                     <label class = "left"> Religion</label>
                     <input class = "right" type = "text" ng-model = "applicant.religion">
-                    <div>
-                        <label> catholic </label>
-                        <input type="checkbox" ng-model = "applicant.isCatholic">
+                    <div ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
+                        <label class = "left"> Catholic </label>
+                        <input class = "right" type = "checkbox" ng-model = "applicant.isCatholic">
                     </div>
                 </div>
                 <div>
@@ -56,11 +56,11 @@
                 </div>
                 <div>
                     <label class = "left"> Date of Birth</label>
-                    <input class = "right" type = "text" ng-model = "applicant.dob">
+                    <input class = "right" type = "date" ng-model = "applicant.dob">
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "applicant.email">
+                    <input class = "right" type = "email" ng-model = "applicant.email">
                 </div>
                 
                 <hr>
@@ -75,7 +75,7 @@
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.father.email">
+                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.father.email">
                 </div>
                 <div>
                     <label class = "left"> Mother's Name</label>
@@ -87,7 +87,7 @@
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.mother.email">
+                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.mother.email">
                 </div>
                 <div>
                     <label class = "left"> Permanent Address</label>
@@ -118,7 +118,7 @@
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.email">
+                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.guardian.email">
                 </div>
                 <div>
                     <label class = "left"> Mobile No</label>

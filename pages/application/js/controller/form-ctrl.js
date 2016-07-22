@@ -45,37 +45,37 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
                 mobileNo:"",
             }
         }
-    };
-    
-    $scope.general = {
-        name : $scope.applicant.name,
-        regNo : $scope.applicant.regNo,
-        religion : $scope.applicant.religion,
-        sect : $scope.applicant.sect,
-        phNo: $scope.applicant.phNo
-    };
-    
-    $scope.chapel = {
-        name : $scope.applicant.name,
-        regNo : $scope.applicant.regNo,
-    };
-    
-    $scope.reader = {
-        name : $scope.applicant.name,
-        regNo : $scope.applicant.regNo,
-        phNo: $scope.applicant.phNo
-    }
-    
+    };  
     
     $scope.postJSON = function(){
-        console.log("Clicked");
+        
+        var general = {};
+        general.name = $scope.applicant.name;
+        general.regNo = $scope.applicant.regNo;
+        general.religion = $scope.applicant.religion;
+        general.sect = $scope.applicant.sect;
+        general.phNo = $scope.applicant.phNo;
+
+        var chapel = {};
+        chapel.name = $scope.applicant.name;
+        chapel.regNo = $scope.applicant.regNo;
+
+        var reader = {};
+        reader.name = $scope.applicant.name;
+        reader.regNo = $scope.applicant.regNo;
+        reader.phNo = $scope.applicant.phNo;
+        
+        console.log($scope.applicant);
+        console.log(general);
         dbServices.post( "bioData", $scope.applicant );
-        dbServices.post( "generalList", $scope.applicant );
+        dbServices.post( "generalList", general );
         
         if($scope.applicant.religion.toUpperCase() == "CHRISTIAN")
         {
-            dbServices.post( "chapelList", $scope.chapel );
-            dbServices.post( "readingList", $scope.reader );
+            console.log($scope.chapel);
+            console.log($scope.reader);
+            dbServices.post( "chapelList", chapel );
+            dbServices.post( "readingList", reader );
         }
     }
 }]);

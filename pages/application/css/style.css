@@ -19,3 +19,8 @@ form
     height: 3%;
     display: inline-block;   
 }
+
+input[type=checkbox]{
+    height:20px;
+    weight:20px;
+}
