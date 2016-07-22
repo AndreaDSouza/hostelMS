@@ -1,0 +1,57 @@
+{
+    "events" : {
+        "event1" : {
+            "title" : "hi",
+            "desc" : "my b'day",
+            "type" : "Birthday",
+            "days" : {
+                "day1" : "true"
+            }
+        },
+        "event2" : {
+            "title" : "hi 2",
+            "desc" : "my b'day 2",
+            "type" : "Birthday 2",
+            "days" : {
+                "day1" : "true"
+            }
+        },
+        "event3" : {
+            "title" : "hi 3",
+            "desc" : "my b'day 3",
+            "type" : "Birthday 3",
+            "days" : {
+                "day2" : "true"
+            }
+        },
+        "event4" : {
+            "title" : "Phenomenon",
+            "desc" : "Go crazy",
+            "type" : "Cultural",
+            "days" : {
+                "day3" : "true"
+            }
+        }
+    },
+    "days" : {
+        "day1" : {
+            "date" : "Jun 25, 2016",
+            "events" : {
+                "event1" : "true",
+                "event2" : "true"
+            }
+        },
+        "day2" : {
+            "date" : "Jun 26, 2016",
+            "events" : {
+                "event3" : "true"
+            }
+        },
+        "day3" : {
+            "date" : "Mar 05, 2017",
+            "events" : {
+                "event3" :true
+            }
+        }
+    }
+}
