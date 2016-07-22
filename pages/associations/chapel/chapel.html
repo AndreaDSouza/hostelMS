@@ -9,7 +9,7 @@
         <!--js-->
         <script src = "js/main.js"></script>
         <script src = "js/services/db-services.js"></script>
-        <script src = "js/chapel-ctrl.js"></script>
+        <script src = "js/controllers/chapel-ctrl.js"></script>
         
         <link rel = "stylesheet" style="text/css" href="css/style.css">
     </head>
@@ -17,7 +17,21 @@
     <body ng-app = "chapelApp">
         <div ng-controller = "chapelCtrl">
             <h1>Chapel Reading list</h1>
-            <div>{{ result }}</div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Passage</th>
+                    </tr>
+                    <tr ng-repeat = "reader in result" >
+                        <td>{{$index+1}}</td>
+                        <td>{{reader.name}}</td>
+                        <td></td><td></td>
+                    +6</tr>
+                </table>
+            </div>
         </div>
     </body>
 
