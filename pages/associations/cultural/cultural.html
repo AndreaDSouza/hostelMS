@@ -16,15 +16,25 @@
     <body>
         
         <div id="calendarBody" ng-controller="calCtrl">
-            
-            <div ng-repeat="month in appCal.currentYear.months" class="month">
-                <h1>{{month.name}}</h1>
-                <div class="days">{{month.days}}</div>
-            </div>
-            
-            <div ng-repeat="month in appCal.nextYear.months" class="month">
-                <h1>{{month.name}}</h1>
-                <div class="days">{{month.days}}</div>
+            <div ng-repeat="year in appCal">
+                <h1>{{year.string}}</h1>
+                <div ng-repeat="month in year.months">
+                    <h3>{{month.string}}</h3>
+                    <div ng-repeat="day in month.days">
+                        <form>
+                            <p>{{day.string}} 
+                                <a ng-click="addEvent(day)">Add</a> 
+                            </p>
+                            <div ng-repeat="event in day.events">
+                                <input ng-change="isEventEmpty( day.events, event )" type="text" placeholder="Title" ng-model="event.title">
+                                <input ng-change="isEventEmpty( day.events, event )" type="text" placeholder="Description" ng-model="event.desc">
+                                <input ng-change="isEventEmpty( day.events, event )" type="text" placeholder="Type" ng-model="event.type">
+                                
+                                <p ng-if="isEventEmpty( day.events, event )"> Fields must not be empty </p>
+                            </div>    
+                        </form>
+                    </div>
+                </div>
             </div>
             
         </div>

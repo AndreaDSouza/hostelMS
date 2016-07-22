@@ -1,14 +1,25 @@
-calApp.service( 'dateService', function(){
+calApp.service( 'dateService', function( $http ){
 
     var self = this;
-    this.currentDate = {};
+    //object that will store current date
+    this.currentDate = new Date();
     
-    //AJAX call
+    //AJAX call to get current date
     this.pull = function( callback ){
-        //fill
-        self.currentDate.year = 2016;
-        self.currentDate.month = 7;
-        self.currentDate.day = 14;
+        
+        //to fix
+        /*
+        $http.get( 'http://www.timeapi.org/utc/now' )
+            .success( function( result ){
+                console.log( result );
+        })
+            .error( function(data, status){
+                console.log( data + '' + status );
+        });*/
+        
+        self.currentDate.setDate(15);
+        self.currentDate.setMonth(5);
+        self.currentDate.setFullYear(2016);
         
         callback();
     };
