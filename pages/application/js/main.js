@@ -1,0 +1,1 @@
+var hostelClient = angular.module("hostelClient",[]);
