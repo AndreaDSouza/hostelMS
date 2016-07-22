@@ -1,27 +1,33 @@
-"general":{
+{
     
-    "name":"",
-    "rNo":"",
-    "phNo":"",
-    "religion":"",
-    "sect":boolean,
+    "general":[
+    
+        {
+            "name":"",
+            "rNo":"",
+            "phNo":"",
+            "religion":"",
+            "sect":"false",
+        }
+    ],
+    
     "chapel":[
         
         {
             "name":"",
-            "sect":boolean
+            "sect":"false"
         }
     ],
+    
     "readingList":[
     
         {
             "name":"",
             "rNo":"",
             "phNo":"",
-            "sect":boolean,
+            "sect":"false",
             "date":"",
-            "attendance":boolean
+            "attendance":"false"
         }
     ]
-    
 };

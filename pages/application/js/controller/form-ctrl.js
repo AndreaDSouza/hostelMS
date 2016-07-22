@@ -10,7 +10,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         isCatholic:false,
         caste:"",
         bloodGroup:"",
-        mobileNo:"",
+        phNo:"",
         dob:"",
         email:"",
         
@@ -19,7 +19,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
             city:"",
             state:"",
             pinCode:"",
-
+													
             father:
             {
                 name:"",
@@ -53,8 +53,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         general.name = $scope.applicant.name;
         general.regNo = $scope.applicant.regNo;
         general.religion = $scope.applicant.religion;
-        //general.sect = $scope.applicant.sect;
-        //general.phNo = $scope.applicant.phNo;
+        general.phNo = $scope.applicant.phNo;
 
         var chapel = {};
         chapel.name = $scope.applicant.name;
@@ -63,7 +62,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         var reader = {};
         reader.name = $scope.applicant.name;
         reader.regNo = $scope.applicant.regNo;
-        //reader.phNo = $scope.applicant.phNo;
+        reader.phNo = $scope.applicant.phNo;
         
         console.log($scope.applicant);
         console.log(general);
