@@ -53,8 +53,8 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         general.name = $scope.applicant.name;
         general.regNo = $scope.applicant.regNo;
         general.religion = $scope.applicant.religion;
-        general.sect = $scope.applicant.sect;
-        general.phNo = $scope.applicant.phNo;
+        //general.sect = $scope.applicant.sect;
+        //general.phNo = $scope.applicant.phNo;
 
         var chapel = {};
         chapel.name = $scope.applicant.name;
@@ -63,7 +63,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         var reader = {};
         reader.name = $scope.applicant.name;
         reader.regNo = $scope.applicant.regNo;
-        reader.phNo = $scope.applicant.phNo;
+        //reader.phNo = $scope.applicant.phNo;
         
         console.log($scope.applicant);
         console.log(general);
@@ -72,8 +72,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         
         if($scope.applicant.religion.toUpperCase() == "CHRISTIAN")
         {
-            console.log($scope.chapel);
-            console.log($scope.reader);
+            console.log("feewf");
             dbServices.post( "chapelList", chapel );
             dbServices.post( "readingList", reader );
         }
