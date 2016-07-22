@@ -7,10 +7,10 @@
         <!--js files-->
         <script src = "js/main.js"></script>
         <script src = "js/services/db-services.js"></script>
-        <script src = "js/controller/app-client.js"></script>
+        <script src = "js/controller/form-ctrl.js"></script>
         <!--script src = "js/stage/applicant-class.js"></script-->
         
-        <link href="css/style.css" type="text/css" rel="stylesheet" > 
+        <link href = "css/style.css" type = "text/css" rel = "stylesheet" > 
         
     <title>Application Form</title>
     </head>
@@ -20,117 +20,125 @@
             <form>
                 <div>
                     <label class = "left"> Student Name</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.name">
+                    <input class = "right" type = "text" ng-model = "applicant.name" capitalize>
                 </div>
                 <div>
                     <label class = "left"> Register No</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.regNo">
+                    <input class = "right" type = "text" ng-model = "applicant.regNo">
                 </div>
                 <div>
                     <label class = "left"> Semester</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.semester">
+                    <input class = "right" type = "number" ng-model = "applicant.semester">
                 </div>
                 <div>
                     <label class = "left"> Year of Entry to Hostel</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.entryYear">
+                    <input class = "right" type = "text" ng-model = "applicant.entryYear">
                 </div>
                 <div>
                     <label class = "left"> Religion</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.religion">
+                    <input class = "right" type = "text" ng-model = "applicant.religion">
+                    <div ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
+                        <label class = "left"> Catholic </label>
+                        <input class = "right" type = "checkbox" ng-model = "applicant.isCatholic">
+                    </div>
                 </div>
                 <div>
                     <label class = "left"> Caste</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.caste">
+                    <input class = "right" type = "text" ng-model = "applicant.caste">
                 </div>
                 <div>
                     <label class = "left"> Blood Group</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.bloodGroup">
+                    <input class = "right" type = "text" ng-model = "applicant.bloodGroup">
                 </div>
                 <div>
                     <label class = "left"> Mobile No</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.mobileNo">
+                    <input class = "right" type = "number" ng-model = "applicant.mobileNo">
                 </div>
                 <div>
                     <label class = "left"> Date of Birth</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.dob">
+                    <input class = "right" type = "date" ng-model = "applicant.dob">
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.studentDetails.email">
+                    <input class = "right" type = "email" ng-model = "applicant.email">
                 </div>
+                
                 <hr>
+                
                 <div>
                     <label class = "left"> Father's Name</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.father.name">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.father.name">
                 </div>
                 <div>
                     <label class = "left"> Occupation</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.father.occupation">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.father.occupation">
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.father.email">
+                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.father.email">
                 </div>
                 <div>
                     <label class = "left"> Mother's Name</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.mother.name">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.mother.name">
                 </div>
                 <div>
                     <label class = "left"> Occupation</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.mother.occupation">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.mother.occupation">
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.mother.email">
+                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.mother.email">
                 </div>
                 <div>
                     <label class = "left"> Permanent Address</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.address">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.address">
                 </div>
                 <div>
                     <label class = "left"> City</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.city">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.city">
                 </div>
                 <div>
                     <label class = "left"> State</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.state">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.state">
                 </div>
                 <div>
                     <label class = "left"> Pin Code</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.pinCode">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.pinCode">
                 </div>
+                
                 <hr>
+                
                 <div>
                     <label class = "left"> Local Guardian</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.name">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.name">
                 </div>
                 <div>
                     <label class = "left"> Occupation</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.occupation">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.occupation">
                 </div>
                 <div>
                     <label class = "left"> Email</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.email">
+                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.guardian.email">
                 </div>
                 <div>
                     <label class = "left"> Mobile No</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.mobileNo">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.mobileNo">
                 </div>
                 <div>
                     <label class = "left"> Address</label>
-                    <textarea class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.address"></textarea>
+                    <textarea class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.address"></textarea>
                 </div>
                 <div>
                     <label class = "left"> City</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.city">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.city">
                 </div>
                 <div>
                     <label class = "left"> State</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.state">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.state">
                 </div>
                 <div>
                     <label class = "left"> Pin Code</label>
-                    <input class = "right" type = "text" ng-model = "appDetails.otherDetails.guardian.pinCode">
+                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.pinCode">
                 </div>
                     <button ng-click = 'postJSON()'>Post</button>
             </form>

@@ -1,0 +1,1 @@
+var chapelApp = angular.module("chapelApp",[]);
