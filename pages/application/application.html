@@ -1,17 +1,17 @@
  <html>
     <head>
-        <!--vendors-->
+        <!--VENDOR JS FILES-->
         <script src="/vendor/firebase.js"></script>
-        <script src = "/vendor/angular.min.js"></script>
-        
-        <!--js files-->
+		<script src = "/vendor/angular.min.js"></script>
+		
+        <!--CUSTOM JS FILES-->
         <script src = "js/main.js"></script>
-        <script src = "js/services/db-services.js"></script>
-
-        <script src = "js/controller/form-ctrl.js"></script>
-        <!--script src = "js/stage/applicant-class.js"></script-->
-
-        
+        <script src = "js/services.js"></script>
+        <script src = "js/controllers.js"></script>
+		
+		<!--VENDOR CSS FILES-->
+		
+		<!--CUSTOM CSS FILES-->
         <link href = "css/style.css" type = "text/css" rel = "stylesheet"> 
         
     <title>Application Form</title>
@@ -22,7 +22,7 @@
             <form>
                 <div>
                     <label class = "left"> Student Name</label>
-                    <input class = "right" type = "text" ng-model = "applicant.name" capitalize>
+                    <input class = "right" type = "text" ng-model = "applicant.name">
                 </div>
                 <div>
                     <label class = "left"> Register No</label>
@@ -142,7 +142,7 @@
                     <label class = "left"> Pin Code</label>
                     <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.pinCode">
                 </div>
-                    <button ng-click = 'postJSON()'>Post</button>
+                    <button ng-click = 'postForm()'>Submit</button>
             </form>
             <hr>
             
