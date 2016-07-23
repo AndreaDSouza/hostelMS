@@ -1,5 +1,10 @@
 hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope,$log,dbServices){
 
+	/**************************
+		DECLARATIONS FOR FORM CONTROLLER
+	**************************/
+	
+	// MODEL OBJECT FOR THE APPLICANT FORM 
     $scope.applicant = {
     
         regNo:"",
@@ -47,30 +52,36 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
         }
     };  
     
-    $scope.postJSON = function(){
+	
+	/**************************
+		USER EVENTS
+	**************************/
+	
+	// to POST APPLICATION TO DB
+    $scope.postForm = function(){
         
-        var general = {};
-        general.name = $scope.applicant.name;
-        general.regNo = $scope.applicant.regNo;
-        general.religion = $scope.applicant.religion;
-        general.phNo = $scope.applicant.phNo;
-
-        var chapel = {};
-        chapel.name = $scope.applicant.name;
-        chapel.regNo = $scope.applicant.regNo;
-
-        var reader = {};
-        reader.name = $scope.applicant.name;
-        reader.regNo = $scope.applicant.regNo;
-        reader.phNo = $scope.applicant.phNo;
+		// general details
+        var genDetails = {};
+        genDetails.name = $scope.applicant.name;
+        genDetails.regNo = $scope.applicant.regNo;
+        genDetails.religion = $scope.applicant.religion;
+        genDetails.phNo = $scope.applicant.phNo;
         
         console.log($scope.applicant);
         console.log(general);
-        dbServices.post( "bioData", $scope.applicant );
+        dbServices.post( "applicantList", $scope.applicant );
         dbServices.post( "generalList", general );
         
         if($scope.applicant.religion.toUpperCase() == "CHRISTIAN")
         {
+			var chapel = {};
+			chapel.name = $scope.applicant.name;
+			chapel.regNo = $scope.applicant.regNo;
+
+			var reader = {};
+			reader.name = $scope.applicant.name;
+			reader.regNo = $scope.applicant.regNo;
+			reader.phNo = $scope.applicant.phNo;
             console.log("feewf");
             dbServices.post( "chapelList", chapel );
             dbServices.post( "readingList", reader );
