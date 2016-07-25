@@ -1,8 +1,8 @@
  <html>
     <head>
         <!--VENDOR JS FILES-->
-        <script src="/vendor/firebase.js"></script>
-		<script src = "/vendor/angular.min.js"></script>
+		<script src="../../vendor/angular.min.js"></script>
+		<script src="../../vendor/firebase.js"></script>
 		
         <!--CUSTOM JS FILES-->
         <script src = "js/main.js"></script>
@@ -10,142 +10,87 @@
         <script src = "js/controllers.js"></script>
 		
 		<!--VENDOR CSS FILES-->
+		<link href="../../css/bootstrap.css" type = "text/css" rel ="stylesheet">
 		
 		<!--CUSTOM CSS FILES-->
         <link href = "css/style.css" type = "text/css" rel = "stylesheet"> 
         
-    <title>Application Form</title>
-    </head>
+    	<title>Application Form</title>
+    
+	 </head>
     <body ng-app = "hostelClient">
-        <h1>APPLICATION FORM</h1>
-        <div ng-controller = "formCtrl">
-            <form>
-                <div>
-                    <label class = "left"> Student Name</label>
-                    <input class = "right" type = "text" ng-model = "applicant.name">
-                </div>
-                <div>
-                    <label class = "left"> Register No</label>
-                    <input class = "right" type = "text" ng-model = "applicant.regNo">
-                </div>
-                <div>
-                    <label class = "left"> Semester</label>
-                    <input class = "right" type = "number" ng-model = "applicant.semester">
-                </div>
-                <div>
-                    <label class = "left"> Year of Entry to Hostel</label>
-                    <input class = "right" type = "text" ng-model = "applicant.entryYear">
-                </div>
-                <div>
-                    <label class = "left"> Religion</label>
-                    <input class = "right" type = "text" ng-model = "applicant.religion">
-                    <div ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
-                        <label class = "left"> Catholic </label>
-                        <input class = "right" type = "checkbox" ng-model = "applicant.isCatholic">
-                    </div>
-                </div>
-                <div>
-                    <label class = "left"> Caste</label>
-                    <input class = "right" type = "text" ng-model = "applicant.caste">
-                </div>
-                <div>
-                    <label class = "left"> Blood Group</label>
-                    <input class = "right" type = "text" ng-model = "applicant.bloodGroup">
-                </div>
-                <div>
-                    <label class = "left"> Mobile No</label>
-                    <input class = "right" type = "number" ng-model = "applicant.mobileNo">
-                </div>
-                <div>
-                    <label class = "left"> Date of Birth</label>
-                    <input class = "right" type = "date" ng-model = "applicant.dob">
-                </div>
-                <div>
-                    <label class = "left"> Email</label>
-                    <input class = "right" type = "email" ng-model = "applicant.email">
-                </div>
-                
-                <hr>
-                
-                <div>
-                    <label class = "left"> Father's Name</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.father.name">
-                </div>
-                <div>
-                    <label class = "left"> Occupation</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.father.occupation">
-                </div>
-                <div>
-                    <label class = "left"> Email</label>
-                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.father.email">
-                </div>
-                <div>
-                    <label class = "left"> Mother's Name</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.mother.name">
-                </div>
-                <div>
-                    <label class = "left"> Occupation</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.mother.occupation">
-                </div>
-                <div>
-                    <label class = "left"> Email</label>
-                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.mother.email">
-                </div>
-                <div>
-                    <label class = "left"> Permanent Address</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.address">
-                </div>
-                <div>
-                    <label class = "left"> City</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.city">
-                </div>
-                <div>
-                    <label class = "left"> State</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.state">
-                </div>
-                <div>
-                    <label class = "left"> Pin Code</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.pinCode">
-                </div>
-                
-                <hr>
-                
-                <div>
-                    <label class = "left"> Local Guardian</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.name">
-                </div>
-                <div>
-                    <label class = "left"> Occupation</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.occupation">
-                </div>
-                <div>
-                    <label class = "left"> Email</label>
-                    <input class = "right" type = "email" ng-model = "applicant.otherDetails.guardian.email">
-                </div>
-                <div>
-                    <label class = "left"> Mobile No</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.mobileNo">
-                </div>
-                <div>
-                    <label class = "left"> Address</label>
-                    <textarea class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.address"></textarea>
-                </div>
-                <div>
-                    <label class = "left"> City</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.city">
-                </div>
-                <div>
-                    <label class = "left"> State</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.state">
-                </div>
-                <div>
-                    <label class = "left"> Pin Code</label>
-                    <input class = "right" type = "text" ng-model = "applicant.otherDetails.guardian.pinCode">
-                </div>
-                    <button ng-click = 'postForm()'>Submit</button>
-            </form>
-            <hr>
-            
-        </div>
-    </body>
+		<h1>APPLICATION FORM</h1>
+		<form class="form-horizontal" ng-controller = "formCtrl" >
+    		<div class="form-group">
+        		<label class="control-label col-sm-2" >Name:</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.name">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Register No:</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.regNo">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Year:</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.year">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Religion</label>
+    			<div class="col-sm-10">
+					<input type = "text" class="form-control" ng-model = "applicant.religion">
+				</div>
+				<div class  = "checkbox" ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN' ">
+					<label ng-model = "isCatholic" ><input type = "checkbox">Catholic</label>
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Sect</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.sect">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Caste</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.caste">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Blood Group</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.bloodGroup">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Caste</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.caste">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Mobile No</label>
+    			<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model = "applicant.phNo">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Email</label>
+    			<div class="col-sm-10">
+					<input type="email" class="form-control" ng-model = "applicant.email">
+				</div>
+			</div>
+			<div class="form-group">
+        		<label class="control-label col-sm-2" >Date of Birth</label>
+    			<div class="col-sm-10">
+					<input type="date" class="form-control" ng-model = "applicant.dob">
+				</div>
+			</div>
+			<button class="btn btn-primary" ng-click = "postForm()">Submit</button>
+		</form>
+	 </body>
 </html>

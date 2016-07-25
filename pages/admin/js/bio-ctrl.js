@@ -2,7 +2,7 @@ bioApp.controller("bioCtrl",["$scope","$timeout","dbServices", function($scope,$
 
     dbServices.get("", function(obj){
         $timeout(function() {
-            $scope.result = obj ;
+            $scope.applicantList = obj ;
             console.log($scope.result);
 
         });

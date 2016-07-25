@@ -13,7 +13,58 @@
     </head>
     <body>
         <div ng-app = "bioApp">
-            <div ng-controller = "bioCtrl">{{ result }}</div>
+            <div ng-controller = "bioCtrl">
+			<div ng-repeat = "applicant in applicantList" >
+				<div>
+					<div>
+                    <label class = "left"> Student Name</label>
+					<p class = "right"> {{ applicant.name }} </p>
+                </div>
+                <div>
+                    <label class = "left"> Register No</label>
+					<p class = "right"> {{ applicant.regNo">}} </p>
+                </div>
+                <div>
+                    <label class = "left"> Semester</label>
+					<p class = "right"> {{ applicant.semester"}}</p>
+                </div>
+                <div>
+                    <label class = "left"> Year of Entry to Hostel</label>
+                    <p class = "right"> {{ applicant.entryYear }} </p>
+                </div>
+                <div>
+                    <label class = "left"> Religion</label>
+                    <p class = "right"> {{ applicant.religion }} </p>
+                    
+					<span ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
+                        <label class = "left"> Catholic </label>
+                        <input class = "right" type = "checkbox" ng-model = "applicant.isCatholic">
+                    </span>
+                </div>
+                <div>
+                    <label class = "left"> Caste</label>
+                    <p class = "right"> {{ applicant.caste }} </p>
+                </div>
+                <div>
+                    <label class = "left"> Blood Group</label>
+                    <p class = "right"> {{ applicant.bloodGroup }} </p>
+                </div>
+                <div>
+                    <label class = "left"> Mobile No</label>
+                    <p class = "right"> {{ applicant.phNo }} </p>
+                </div>
+                <div>
+                    <label class = "left"> Date of Birth</label>
+                    <p class = "right"> {{ applicant.dob }} </p>
+                </div>
+                <div>
+                    <label class = "left"> Email</label>
+                    <p class = "right"> {{ applicant.email }} </p>
+                </div>
+                
+				<button ng-click = 'postForm()'>Allot</button>
+			</div>
+		</div>
         </div>
     </body>
 </html>
