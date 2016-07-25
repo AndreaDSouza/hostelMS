@@ -26,4 +26,4 @@ bioApp.service("dbServices", function () {
     };
 	
     
-})
+});
