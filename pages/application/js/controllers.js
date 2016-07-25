@@ -7,6 +7,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
 	// MODEL OBJECT FOR THE APPLICANT FORM 
     $scope.applicant = {
     
+		toRemove:false;
         regNo:"",
         name:"",
         semester:"",

@@ -13,5 +13,5 @@ messApp.service("dbServices", function () {
         });
 
     };
+});
     
-})

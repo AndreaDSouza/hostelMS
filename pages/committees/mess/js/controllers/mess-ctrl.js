@@ -2,10 +2,10 @@ messApp.controller("messCtrl",["$scope","$timeout","dbServices" ,function($scope
     
     dbServices.get("generalList", function(obj){
         $timeout(function() {
-            $scope.result = obj;
-            console.log($scope.result);
+            $scope.messList = obj;
+            console.log($scope.messList);
             
-        });
+        })
     });
     
 }]);
