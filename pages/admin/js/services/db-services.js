@@ -14,7 +14,7 @@ bioApp.service("dbServices", function () {
 
     };
 	
-	    this.push = function( subUrl, toPush )
+    this.push = function( subUrl, toPush )
     {
         var ref = new Firebase( self.bUrl + subUrl );
 		
@@ -25,5 +25,10 @@ bioApp.service("dbServices", function () {
 		//callback();
     };
 	
+    
+    this.delete = function( subUrl)
+    {
+        var ref = new Firebase( self.bUrl + subUrl );
+    };
     
 });

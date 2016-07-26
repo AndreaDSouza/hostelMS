@@ -23,6 +23,7 @@
 					<th>Name</th>
 					<th>Register No</th>
 					<th>Religion</th>
+                    <th>Select</th>
 				  </tr>
 				</thead>
 				<tbody>
@@ -32,7 +33,7 @@
 					  <td>{{applicant.regNo}}</td>
 					  <td>{{applicant.religion}}</td>
 					  <td>
-						  <button class="btn btn-primary" ng-click = "submitApplication(applicant)">Allot</button>
+						  <button class="btn btn-primary" ng-click="activeButton(applicant)">{{display}}</button>
 					  </td>
 					</tr>
 				</tbody>
