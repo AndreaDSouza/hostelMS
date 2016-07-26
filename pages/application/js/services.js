@@ -10,7 +10,7 @@ hostelClient.service("dbServices" , function(){
         var ref = new Firebase( self.bUrl + subUrl );
 		
 		// to - change from update to push
-        ref.child(toPush).push(toPush);
+        ref.push(toPush);
 		
 		// to - add calback to success method
 		//callback();

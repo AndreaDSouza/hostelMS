@@ -32,71 +32,71 @@
                     <div ng-message = "maxlength">*too long*</div>
                 </script>
                 
-                <div class = "row"> 
+                <div > 
                     <label class = "left"> Student Name</label>
                     <input class = "right" type = "text" name = "studName" ng-model = "applicant.name" required>
                     <div class = "errorMess" ng-messages = "appForm.studName.$error" ng-show = "appForm.studName.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Register No</label>
                     <input class = "right" type = "text" name = "regNo" ng-model = "applicant.regNo" required>
                     <div class = "errorMess" ng-messages = "appForm.regNo.$error" ng-show = "appForm.regNo.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Semester</label>
                     <input class = "right" type = "number" name = "sem" ng-model = "applicant.semester" ng-maxlength = "1" required>
                     <div class = "errorMess" ng-messages = "appForm.sem.$error" ng-show = "appForm.sem.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Year of Entry to Hostel</label>
                     <input class = "right" type = "number" name = "year" ng-pattern="/^[2]{1}?[-\s\.]?[0-9]{3}$/" ng-model = "applicant.entryYear" required>
                     <div class = "errorMess" ng-messages = "appForm.year.$error" ng-show = "appForm.year.$touched">
                         <div ng-message = "pattern">*not a valid year*</div><div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Religion</label>
                     <input class = "right" type = "text" name = "reli" ng-model = "applicant.religion" required>
                     <div class = "errorMess" ng-messages = "appForm.reli.$error" ng-show = "appForm.reli.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
-                    <div ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
+                    <div  ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
                         <label class = "left"> Catholic </label>
                         <input class = "right" type = "checkbox" ng-model = "applicant.isCatholic">
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Caste</label>
                     <input class = "right" type = "text" name = "caste" ng-model = "applicant.caste">
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Blood Group</label>
                     <input class = "right" type = "text" name = "bg" ng-model = "applicant.bloodGroup" required>
                     <div class = "errorMess" ng-messages = "appForm.bg.$error" ng-show = "appForm.bg.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Mobile No</label>
                     <input class = "right" type = "number" name = "phNo" ng-model = "applicant.mobileNo" ng-pattern = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required>
                     <div class = "errorMess" ng-messages = "appForm.phNo.$error" ng-show = "appForm.phNo.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Date of Birth</label>
                     <input class = "right" type = "date" name = "dob" ng-model = "applicant.dob" required>
                     <div class = "errorMess" ng-messages = "appForm.dob.$error" ng-show = "appForm.dob.$touched">
                         <div ng-messages-include = "error-messages"></div>
                     </div>
                 </div>
-                <div class = "row">
+                <div >
                     <label class = "left"> Email</label>
                     <input class = "right" type = "email" name = "email" ng-model = "applicant.email" required>
                     <div class = "errorMess" ng-messages = "appForm.email.$error" ng-show = "appForm.email.$touched">
