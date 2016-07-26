@@ -6,7 +6,6 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
 	
 	// MODEL OBJECT FOR THE APPLICANT FORM 
     $scope.applicant = {
-    
         regNo:"",
         name:"",
         semester:"",
