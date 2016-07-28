@@ -33,7 +33,7 @@
 					  <td>{{ applicantList[applicantKey].regNo }}</td>
 					  <td>{{ applicantList[applicantKey].religion }}</td>
 					  <td>
-						  <button class="btn btn-primary" ng-click="allotBtn(applicantKey)">
+						  <button class="btn btn-primary" ng-click="allotBtn( applicantKey, applicantList[applicantKey] )">
 							  {{ applicantList[applicantKey].alloted }}
 						  </button>
 					  </td>

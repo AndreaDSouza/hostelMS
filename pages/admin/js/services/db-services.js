@@ -16,19 +16,24 @@ bioApp.service("dbServices", function () {
 	
     this.push = function( subUrl, toPush )
     {
+        console.log("pushing..." + toPush + " to " + subUrl);
         var ref = new Firebase( self.bUrl + subUrl );
-		
-		// to - change from update to push
         ref.push(toPush);
-		
-		// to - add calback to success method
-		//callback();
+    };
+    
+    this.set = function( subUrl, toSet )
+    {
+        console.log("setting..." + toSet + " in " + subUrl);
+        var ref = new Firebase( self.bUrl + subUrl );
+        ref.set(toSet);
     };
 	
     
     this.delete = function( subUrl)
     {
+        console.log("deleting...at..." + subUrl);
         var ref = new Firebase( self.bUrl + subUrl );
+        ref.remove();
     };
     
 });

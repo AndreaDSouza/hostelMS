@@ -117,7 +117,7 @@ calApp.controller('calCtrl', function($scope, dateService, $http){
     
         $scope.addEvent = function(day){
         
-            //push a blank event for the date
+            // push a blank event for the date
             day.events.push(
                 {
                     title : "title",

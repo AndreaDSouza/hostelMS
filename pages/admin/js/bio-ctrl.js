@@ -3,44 +3,48 @@ bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices
     dbServices.get("applicantList", function(obj){
         $scope.$apply(function() {
             $scope.applicantList = obj;
-			console.log( $scope.applicantList );
 			
 			for( key in $scope.applicantList )
 			{
 				$scope.applicantList[key].alloted = "Allot";
 			}
 			
-			//getAllotedList();
+			getAllotedList();
 		});
     });
 	
 	var getAllotedList = function()
 	{
 		dbServices.get("allotedList", function(obj){
-			$scope.$apply(function() {
-				$scope.allotedList = obj;
-				console.log( $scope.applicantList );
-				
-				for( key in $scope.allotedList )
-				{	
-					if( $scope.applicantList[key] )
-					{
-						$scope.applicantList[key].alloted = "Alloted";
-					}
-				}
-			});
+            $scope.allotedList = obj;
+
+            for( key in $scope.allotedList )
+            {	
+                if( $scope.applicantList[key] )
+                {
+                    $scope.applicantList[key].alloted = "Alloted";
+                }
+            }
 		});
 	}
    
-    $scope.allotBtn = function(Key) {
-        if( $scope.applicantList[key].alloted == "Alloted" )
+    $scope.allotBtn = function( applicantKey, applicant ) {
+        if( applicant.alloted == "Alloted" )
         {
-            $scope.applicantList[key].alloted == "Allot"
+            applicant.alloted = "Allot";
+            
+            dbServices.delete( "allotedList/" + applicantKey );
         }
-        else if( $scope.applicantList[key].alloted == "Allot" )
+        else
         {
-            $scope.applicantList[key].alloted == "Alloted";
-			
+            applicant.alloted = "Alloted";
+            
+            var toSet = {};
+            toSet.alloted = "Alloted";
+            
+            console.log( toSet );
+			dbServices.set( "allotedList/" + applicantKey , toSet );
+            
 			/*
             var general = {};
             general.name = applicant.name;
