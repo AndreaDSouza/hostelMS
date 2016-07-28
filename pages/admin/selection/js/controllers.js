@@ -1,34 +1,36 @@
 bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices){
 
     dbServices.get("applicantList", function(obj){
-        $scope.$apply(function() {
-            $scope.applicantList = obj;
-			
+		
+		$scope.$apply(function(){
+        	$scope.applicantList = obj;
+		
 			for( key in $scope.applicantList )
 			{
 				$scope.applicantList[key].alloted = "Allot";
 			}
-			
-			getAllotedList();
 		});
+		getAllotedList();
+		
     });
 	
-	var getAllotedList = function()
-	{
+	var getAllotedList = function(){
 		dbServices.get("allotedList", function(obj){
-            $scope.allotedList = obj;
+			$scope.$apply(function(){
+				$scope.allotedList = obj;
 
-            for( key in $scope.allotedList )
-            {	
-                if( $scope.applicantList[key] )
-                {
-                    $scope.applicantList[key].alloted = "Alloted";
-                }
-            }
+				for( key in $scope.allotedList )
+				{	
+					if( $scope.applicantList[key] )
+					{
+						$scope.applicantList[key].alloted = "Alloted";
+					}
+				}
+			});
 		});
-	}
+	};
    
-    $scope.allotBtn = function( applicantKey, applicant ) {
+    $scope.allotBtn = function( applicantKey, applicant ){
         if( applicant.alloted == "Alloted" )
         {
             applicant.alloted = "Allot";
