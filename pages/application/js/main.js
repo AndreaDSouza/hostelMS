@@ -1,1 +1,1 @@
-var hostelClient = angular.module("hostelClient",[]);
+var hostelClient = angular.module("hostelClient",['ngMessages']);
