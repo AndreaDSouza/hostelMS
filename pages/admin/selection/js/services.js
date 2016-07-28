@@ -7,19 +7,17 @@ bioApp.service("dbServices", function () {
     {
         var ref = new Firebase( self.bUrl + subUrl );
         ref.on("value", function( snapshot ){
-        
             callBack(snapshot.val());
-            
         });
 
     };
 	
-    this.push = function( subUrl, toPush )
+    /*this.push = function( subUrl, toPush )
     {
         console.log("pushing..." + toPush + " to " + subUrl);
         var ref = new Firebase( self.bUrl + subUrl );
         ref.push(toPush);
-    };
+    };*/
     
     this.set = function( subUrl, toSet )
     {
@@ -28,7 +26,6 @@ bioApp.service("dbServices", function () {
         ref.set(toSet);
     };
 	
-    
     this.delete = function( subUrl)
     {
         console.log("deleting...at..." + subUrl);

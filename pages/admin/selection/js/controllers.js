@@ -36,6 +36,9 @@ bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices
             applicant.alloted = "Allot";
             
             dbServices.delete( "allotedList/" + applicantKey );
+            dbServices.delete( "generalList/" + applicantKey );
+            if(applicant.religion.toUpperCase() == "CHRISTIAN")
+                dbServices.delete( "chapelList/" +applicantKey );
         }
         else
         {
@@ -44,26 +47,28 @@ bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices
             var toSet = {};
             toSet.alloted = "Alloted";
             
-            console.log( toSet );
 			dbServices.set( "allotedList/" + applicantKey , toSet );
             
-			/*
+			
             var general = {};
             general.name = applicant.name;
             general.regNo = applicant.regNo;
             general.phNo = applicant.phNo;
             general.religion = applicant.religion;
-
+            
+            dbServices.set( "generalList/" + applicantKey , general );
+            
+            
             if(applicant.religion.toUpperCase() == "CHRISTIAN")
             {
-				
                 var chapel = {};
                 chapel.name = applicant.name;
                 chapel.regNo = applicant.regNo;
                 chapel.phNo = applicant.phNo;
                 chapel.isCatholic = applicant.isCatholic;
+                
+                dbServices.set( "chapelList/" + applicantKey , chapel );
             }
-			*/
         }
   	};  
 }]);

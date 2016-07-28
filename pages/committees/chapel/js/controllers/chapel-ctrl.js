@@ -3,9 +3,6 @@ chapelApp.controller("chapelCtrl",["$scope","$timeout","dbServices" ,function($s
     dbServices.get("chapelList", function(obj){
         $timeout(function() {
             $scope.chapelList = obj;
-            console.log($scope.chapelList);
-            
         });
     });
-    
 }]);

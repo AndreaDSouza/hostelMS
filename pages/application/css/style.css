@@ -9,17 +9,9 @@ form
     margin: auto;
 }
 
-.left {
-    height: 30px;
-    padding: 10px;
-    display: inline-block;
-}
-
 .right {
     float: right;
-    height: 30px;
-    width: 200px;
-    display: inline-block;
+    display: block;
 }
 
 input[type=checkbox]{
