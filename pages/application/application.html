@@ -4,7 +4,8 @@
         <script src = "/vendor/firebase.js"></script>
 		<script src = "/vendor/angular.min.js"></script>
 		<script src = "/vendor/angular-messages.min.js"></script>
-		<script src = "/vendor/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
         <!--CUSTOM JS FILES-->
         <script src = "js/main.js"></script>
@@ -237,7 +238,7 @@
                 <div class = "errorMess" ng-messages = "appForm.studName.$error" ng-show = "appForm.studName.$touched">
                     <div ng-messages-include = "error-messages"></div>
             </div-->
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">PREVIEW</button>
+			<button type="button" class = "btn btn-primary" data-toggle="modal" data-target="#myModal">Preview</button>
         </form>
 		 
 		 <!-- Modal -->
