@@ -1,42 +1,63 @@
-bioApp.controller("bioCtrl",["$scope","$timeout","dbServices", function($scope,$timeout,dbServices){
+bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices){
 
     dbServices.get("applicantList", function(obj){
-        $timeout(function() {
+        $scope.$apply(function() {
             $scope.applicantList = obj;
+			console.log( $scope.applicantList );
+			
+			for( key in $scope.applicantList )
+			{
+				$scope.applicantList[key].alloted = "Allot";
+			}
+			
+			//getAllotedList();
 		});
     });
-    
-    $scope.isActive = false;
-    $scope.display = "Allot";
+	
+	var getAllotedList = function()
+	{
+		dbServices.get("allotedList", function(obj){
+			$scope.$apply(function() {
+				$scope.allotedList = obj;
+				console.log( $scope.applicantList );
+				
+				for( key in $scope.allotedList )
+				{	
+					if( $scope.applicantList[key] )
+					{
+						$scope.applicantList[key].alloted = "Alloted";
+					}
+				}
+			});
+		});
+	}
    
-    $scope.activeButton = function(applicant) {
-        if(this.isActive === true)
+    $scope.allotBtn = function(Key) {
+        if( $scope.applicantList[key].alloted == "Alloted" )
         {
-            this.display = "Allot";
-            dbServices.delete("generalList");
+            $scope.applicantList[key].alloted == "Allot"
         }
-        else if(this.isActive === false)
+        else if( $scope.applicantList[key].alloted == "Allot" )
         {
-            this.display = "Allotted";
+            $scope.applicantList[key].alloted == "Alloted";
+			
+			/*
             var general = {};
             general.name = applicant.name;
             general.regNo = applicant.regNo;
             general.phNo = applicant.phNo;
             general.religion = applicant.religion;
 
-            dbServices.push("generalList", general);
-
             if(applicant.religion.toUpperCase() == "CHRISTIAN")
             {
+				
                 var chapel = {};
                 chapel.name = applicant.name;
                 chapel.regNo = applicant.regNo;
                 chapel.phNo = applicant.phNo;
                 chapel.isCatholic = applicant.isCatholic;
-
-                dbServices.push("chapelList", chapel);
             }
+			*/
         }
-        this.isActive = !this.isActive;
-  };  
+  	};  
 }]);

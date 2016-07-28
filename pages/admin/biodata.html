@@ -27,13 +27,15 @@
 				  </tr>
 				</thead>
 				<tbody>
-				  <tr ng-repeat = "applicant in applicantList" >
-					  <td>{{$index+1}}</td>
-					  <td>{{applicant.name}}</td>
-					  <td>{{applicant.regNo}}</td>
-					  <td>{{applicant.religion}}</td>
+				  <tr ng-repeat = "(applicantKey,value) in applicantList" >
+					  <td>{{ $index+1 }}</td>
+					  <td>{{ applicantList[applicantKey].name }}</td>
+					  <td>{{ applicantList[applicantKey].regNo }}</td>
+					  <td>{{ applicantList[applicantKey].religion }}</td>
 					  <td>
-						  <button class="btn btn-primary" ng-click="activeButton(applicant)">{{display}}</button>
+						  <button class="btn btn-primary" ng-click="allotBtn(applicantKey)">
+							  {{ applicantList[applicantKey].alloted }}
+						  </button>
 					  </td>
 					</tr>
 				</tbody>
