@@ -1,38 +1,37 @@
-h1
-{
-    text-align: center;
-}
-
 .right {
-    float: right;
-    display: block;
+    float : right;
+    display : block;
 }
 
 input[type=checkbox]{
-    height: 20px;
-    width: 20px;
+    height : 20px;
+    width : 20px;
 }
 
 input.ng-touched.ng-invalid{
-    border: 1px solid red;
+    border : 1px solid red;
 }
 
 .errorMess{
-    display: inline-block;
-    color: red;
+    display : inline-block;
+    color : red;
 }
 
 button{
-    height: 30px;
-    width: 80px;
-    float: right;
+    height : 30px;
+    width : 80px;
+    float : right;
 }
 
 form#application-form{
-	width: 640px;
-    margin: 0 auto;
+	width : 640px;
+    margin : 0 auto;
+}
+
+form#application-form table{
+	width : 100%;
 }
 
 form#application-form table tr{
-	padding :10px;
+	padding : 10px;
 }
