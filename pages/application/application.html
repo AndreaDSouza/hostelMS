@@ -23,7 +23,7 @@
      
      <body ng-app = "hostelClient">
         <h1>APPLICATION FORM</h1>
-        <form name = "appForm" form class = "form-horizontal" ng-controller = "formCtrl" novalidate>
+        <div name = "appForm" form class = "form-horizontal" ng-controller = "formCtrl" novalidate>
 
             <script type = "text/ng-template" id = "error-messages">
                 <div ng-message = "required">*cannot be blank*</div>
@@ -31,99 +31,129 @@
                 <div ng-message = "number">*should be a number*</div>
                 <div ng-message = "pattern">*must be a valid 10 digit phone number*</div>
                 <div ng-message = "maxlength">*too long*</div>
-            </script>
-
-            <div class="form-group"> 
-                <label  class = "control-label col-sm-2"> Student Name</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "text" name = "studName" ng-model = "applicant.name" required>
-                    <div class = "errorMess" ng-messages = "appForm.studName.$error" ng-show = "appForm.studName.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Register No</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "text" name = "regNo" ng-model = "applicant.regNo" required>
-                    <div class = "errorMess" ng-messages = "appForm.regNo.$error" ng-show = "appForm.regNo.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Semester</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "number" name = "sem" ng-model = "applicant.semester" ng-maxlength = "1" required>
-                    <div class = "errorMess" ng-messages = "appForm.sem.$error" ng-show = "appForm.sem.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Year of Entry to Hostel</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "number" name = "year" ng-pattern="/^[2]{1}?[-\s\.]?[0-9]{3}$/" ng-model = "applicant.entryYear" required>
-                    <div class = "errorMess" ng-messages = "appForm.year.$error" ng-show = "appForm.year.$touched">
-                        <div ng-message = "pattern">*not a valid year*</div><div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Religion</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "text" name = "reli" ng-model = "applicant.religion" required>
-                    <div class = "errorMess" ng-messages = "appForm.reli.$error" ng-show = "appForm.reli.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-                <div  ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
-                    <label  class = "control-label col-sm-2"> Catholic </label>
-                    <input class = "form-control" type = "checkbox" ng-model = "applicant.isCatholic">
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Caste</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "text" name = "caste" ng-model = "applicant.caste">
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Blood Group</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "text" name = "bg" ng-model = "applicant.bloodGroup" required>
-                    <div class = "errorMess" ng-messages = "appForm.bg.$error" ng-show = "appForm.bg.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Mobile No</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "number" name = "phNo" ng-model = "applicant.mobileNo" ng-pattern = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required>
-                    <div class = "errorMess" ng-messages = "appForm.phNo.$error" ng-show = "appForm.phNo.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Date of Birth</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "date" name = "dob" ng-model = "applicant.dob" required>
-                    <div class = "errorMess" ng-messages = "appForm.dob.$error" ng-show = "appForm.dob.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label  class = "control-label col-sm-2"> Email</label>
-                <div class="col-sm-10">
-                    <input class = "form-control" type = "email" name = "email" ng-model = "applicant.email" required>
-                    <div class = "errorMess" ng-messages = "appForm.email.$error" ng-show = "appForm.email.$touched">
-                        <div ng-messages-include = "error-messages"></div>
-                    </div>
-                </div>
-            </div>
+			</script>
+		
+			<form id="application-form" novalidate class="simple-form">
+				<table>
+					<tr>
+						<td>
+							<label  class = "control-label"> Student Name</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "text" name = "studName" ng-model = "applicant.name" required>
+							<div class = "errorMess" ng-messages = "appForm.studName.$error" ng-show = "appForm.studName.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label  class = "control-label"> Register No</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "text" name = "regNo" ng-model = "applicant.regNo" required>
+							<div class = "errorMess" ng-messages = "appForm.regNo.$error" ng-show = "appForm.regNo.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label  class = "control-label"> Semester</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "number" name = "sem" ng-model = "applicant.semester" ng-maxlength = "1" required>
+							<div class = "errorMess" ng-messages = "appForm.sem.$error" ng-show = "appForm.sem.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label  class = "control-label"> Year of Entry to Hostel</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "number" name = "year" ng-pattern="/^[2]{1}?[-\s\.]?[0-9]{3}$/" ng-model = "applicant.entryYear" required>
+							<div class = "errorMess" ng-messages = "appForm.year.$error" ng-show = "appForm.year.$touched">
+								<div ng-message = "pattern">*not a valid year*</div><div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label  class = "control-label"> Religion</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "text" name = "reli" ng-model = "applicant.religion" required>
+							<div class = "errorMess" ng-messages = "appForm.reli.$error" ng-show = "appForm.reli.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+							
+							<div  ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
+								<label  class = "control-label col-sm-2"> Catholic </label>
+								<input class = "form-control" type = "checkbox" ng-model = "applicant.isCatholic">
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<label  class = "control-label"> Caste</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "text" name = "caste" ng-model = "applicant.caste">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label  class = "control-label"> Blood Group</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "text" name = "bg" ng-model = "applicant.bloodGroup" required>
+							<div class = "errorMess" ng-messages = "appForm.bg.$error" ng-show = "appForm.bg.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<label  class = "control-label"> Mobile No</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "number" name = "phNo" ng-model = "applicant.mobileNo" ng-pattern = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required>
+							<div class = "errorMess" ng-messages = "appForm.phNo.$error" ng-show = "appForm.phNo.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<label  class = "control-label"> Date of Birth</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "date" name = "dob" ng-model = "applicant.dob" required>
+							<div class = "errorMess" ng-messages = "appForm.dob.$error" ng-show = "appForm.dob.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<label  class = "control-label"> Email</label>
+						</td>
+						<td>
+							<input class = "form-control" type = "email" name = "email" ng-model = "applicant.email" required>
+							<div class = "errorMess" ng-messages = "appForm.email.$error" ng-show = "appForm.email.$touched">
+								<div ng-messages-include = "error-messages"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</form>
 
             <hr>
 
@@ -239,6 +269,6 @@
                     <div ng-messages-include = "error-messages"></div>
             </div-->
 			<button class = "btn btn-primary" ng-click = 'postForm()'>SUBMIT</button>
-         </form>
+         </div>
     </body>
 </html>

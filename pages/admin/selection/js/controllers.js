@@ -9,8 +9,9 @@ bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices
 			{
 				$scope.applicantList[key].alloted = "Allot";
 			}
+			
+			getAllotedList();
 		});
-		getAllotedList();
 		
     });
 	
@@ -38,7 +39,7 @@ bioApp.controller("bioCtrl",["$scope", "dbServices", function($scope, dbServices
             dbServices.delete( "allotedList/" + applicantKey );
             dbServices.delete( "generalList/" + applicantKey );
             if(applicant.religion.toUpperCase() == "CHRISTIAN")
-                dbServices.delete( "chapelList/" +applicantKey );
+                dbServices.delete( "chapelList/" + applicantKey );
         }
         else
         {

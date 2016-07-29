@@ -25,9 +25,8 @@
 						<th>Name</th>
 						<th>Register No</th>
 						<th>Religion</th>
-						<th>Select</th>
 					</tr>
-					<tr ng-repeat = "(applicantKey,value) in applicantList" data-toggle="modal" data-target="#{{ applicantKey }}">
+					<tr ng-repeat = "(applicantKey,value) in applicantList" >
 						
 						<td>{{ $index+1 }}</td>
 						<td>{{ applicantList[applicantKey].name }}</td>
@@ -37,6 +36,7 @@
 							<button class="btn btn-primary" ng-click="allotBtn( applicantKey, applicantList[applicantKey] )">
 								{{ applicantList[applicantKey].alloted }}
 							</button>
+							<button class="btn btn-primary" data-toggle="modal" data-target='#{{ applicantKey }}'>Preview</button>
 						</td>
 					</tr>
 				</table>

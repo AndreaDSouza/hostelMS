@@ -1,0 +1,65 @@
+<!-- Modal -->
+<div ng-repeat = "(applicantKey,value) in applicantList" >
+	<div class="modal fade" id="{{ applicantKey }}" role="dialog">
+		<div class="modal-dialog">
+			
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Biodata</h4>
+				</div>
+				<div class="modal-body">
+					<form name = "appForm" form class = "form-horizontal">
+						<div class="form-group"> 
+							<label  class = "control-label col-sm-2"> Student Name</label>
+							<p class="form-control-static">{{applicantList[applicantKey].name}}</p>
+						</div>
+						<div class="form-group">
+							<label  class = "control-label col-sm-2"> Register No</label>
+							<p class="form-control-static">{{applicantList[applicantKey].regNo}}</p>
+						</div>
+						<div class="form-group">
+							<label  class = "control-label col-sm-2"> Semester</label>
+							<p class="form-control-static">{{applicantList[applicantKey].semester}}</p>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Year of Entry to Hostel</label>
+								<p class="form-control-static">{{applicantList[applicantKey].year}}</p>
+							</div>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Religion</label>
+								<p class="form-control-static">{{applicantList[applicantKey].religion}}</p>
+							</div>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Caste</label>
+								<p class="form-control-static">{{applicantList[applicantKey].caste}}</p>
+							</div>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Blood Group</label>
+								<p class="form-control-static">{{applicantList[applicantKey].bloodGroup}}</p>
+							</div>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Mobile No</label>
+								<p class="form-control-static">{{applicantList[applicantKey].phNo}}</p>
+							</div>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Date of Birth</label>
+								<p class="form-control-static">{{applicantList[applicantKey].dob}}</p>
+							</div>
+							<div class="form-group">
+								<label  class = "control-label col-sm-2"> Email</label>
+								<p class="form-control-static">{{applicantList[applicantKey].email}}</p>
+							</div>
+							
+							</form>
+						</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" ng-click="allotBtn( applicantKey, applicantList[applicantKey] )">
+							{{ applicantList[applicantKey].alloted }}
+						</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
