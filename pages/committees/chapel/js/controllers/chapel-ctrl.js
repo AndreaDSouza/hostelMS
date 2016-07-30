@@ -5,4 +5,13 @@ chapelApp.controller("chapelCtrl",["$scope","$timeout","dbServices" ,function($s
             $scope.chapelList = obj;
         });
     });
+	
+	$scope.readReaders = [];
+	
+	$scope.hasRead = function( reader )
+	{
+		console.log("clicked");
+		$scope.readReaders.push(reader);
+	}
+	
 }]);
