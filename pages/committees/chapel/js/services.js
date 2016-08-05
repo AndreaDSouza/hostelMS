@@ -1,7 +1,7 @@
 chapelApp.service("dbServices", function () {
 
     var self = this;
-    this.bUrl = "https://hostelms.firebaseio.com/";
+    this.bUrl = "https://hostelms.firebaseio.com";
     
     this.get = function(subUrl , callBack)
     {
@@ -13,5 +13,12 @@ chapelApp.service("dbServices", function () {
         });
 
     };
+	
+	this.update = function( subUrl, obj, callBack )
+	{
+		var ref = new Firebase( self.bUrl + subUrl );
+        ref.update( obj );
+		callBack();
+	}
     
 })

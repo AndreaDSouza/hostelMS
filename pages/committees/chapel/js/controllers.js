@@ -1,17 +1,14 @@
 chapelApp.controller("chapelCtrl",["$scope","$timeout","dbServices" ,function($scope,$timeout,dbServices){
     
-    dbServices.get("chapelList", function(obj){
+    dbServices.get("/chapelList", function(obj){
         $timeout(function() {
             $scope.chapelList = obj;
         });
     });
 	
-	$scope.readReaders = [];
-	
-	$scope.hasRead = function( reader )
+	$scope.updateChapel = function()
 	{
-		console.log("clicked");
-		$scope.readReaders.push(reader);
+		dbServices.update( '/chapelList/', $scope.chapelList, function(){} );
 	}
 	
 }]);

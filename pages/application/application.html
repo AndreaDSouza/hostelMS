@@ -102,7 +102,7 @@
 							</div>
 							
 							<div  ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
-								<label  class = "control-label col-sm-2"> Catholic </label>
+								<label  class = "control-label"> Catholic </label>
 								<input class = "form-control" type = "checkbox" ng-model = "applicant.isCatholic">
 							</div>
 						</td>
@@ -162,7 +162,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<button class = "btn btn-primary" ng-click = 'postForm()'>SUBMIT</button>
+							<button class = "btn btn-primary" ng-click = 'postForm()' ng-disabled = 'appForm.$invalid'>SUBMIT</button>
 						</td>
 					</tr>
 				</table>

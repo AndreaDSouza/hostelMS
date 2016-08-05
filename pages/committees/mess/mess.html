@@ -3,42 +3,74 @@
     <head>
         <title>Mess list</title>
         <!--vendor-->
-        <script src = "../../../vendor/firebase.js"></script>
-        <script src = "../../../vendor/angular.min.js"></script>
+        <script src = "/vendor/firebase.js"></script>
+        <script src = "/vendor/angular.min.js"></script>
         
         <!--js-->
         <script src = "js/main.js"></script>
-        <script src = "js/services/db-services.js"></script>
-        <script src = "js/controllers/mess-ctrl.js"></script>
+        <script src = "js/services.js"></script>
+        <script src = "js/controllers.js"></script>
         
 		<!--VENDOR CSS FILES-->
-		<link href="../../../css/bootstrap.css" type = "text/css" rel ="stylesheet">
+		<link href="/css/bootstrap.css" type = "text/css" rel ="stylesheet">
 		
         <!--link rel = "stylesheet" style="text/css" href="css/style.css"-->
     </head>
     
-    <body ng-app = "messApp">
-        <div ng-controller = "messCtrl">
-            <h1>Mess list</h1>
-            <div>
-				<table class="table table-striped">
-				<thead>
-				  <tr>
-					<th>Index</th>
-					<th>Name</th>
-					<th>Date</th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr ng-repeat = "maker in messList" >
-					  <td>{{$index+1}}</td>
-					  <td>{{maker.name}}</td>
-					  <td></td>
-				`</tr>
-				</tbody>
-			  </table>
-            </div>
-        </div>
-    </body>
-
+	<body ng-app = "messApp" class="container">
+		
+		<div id="page-loading">
+    		<img style="display:block; margin:0 auto;" src="/images/page-loading.gif">
+		</div>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(event) {
+				/*VANILLA JAVASCRIPT*/
+				var element = document.getElementById("page-loading");
+				element.parentNode.removeChild(element);
+			});
+		</script>
+		
+		
+		<div ng-controller = "messCtrl">
+			<h2>Mess list</h2>
+			<div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Index</th>
+							<th>Name</th>
+							<th>Date</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="(makerKey,value) in messList" ng-class="{'bg-danger':chapelList[makerKey].hasRead==true}">
+							<td>{{$index+1}}</td>
+							<td>{{messList[makerKey].name}}</td>
+							<td></td>
+							<td><input type = "checkbox" ng-model="messList[makerKey].toMake" ng-click="toggleToMake(messList[makerKey].toMake)" ng-hide = "chapelList[makerKey].hasRead"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Date</th>
+							<th>Is Busy</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="(makerKey,value) in messList" ng-if="messList[makerKey].toMake==true">
+							<td>{{messList[makerKey].name}}</td>
+							<td></td>
+							<td>{{ chapelList[makerKey].hasRead }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<button class="btn btn-primary" ng-click="updateMess()">Save</button>
+		</div>
+	</body>
 </html>
