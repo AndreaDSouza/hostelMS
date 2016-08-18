@@ -8,8 +8,8 @@
         
         <!--js-->
         <script src = "js/main.js"></script>
-        <script src = "js/services/db-services.js"></script>
-        <script src = "js/controllers/chapel-ctrl.js"></script>
+        <script src = "js/services.js"></script>
+        <script src = "js/controllers.js"></script>
         
 		<!--VENDOR CSS FILES-->
 		<link href="/css/bootstrap.css" type = "text/css" rel ="stylesheet">
@@ -17,9 +17,9 @@
         <link href="css/style.css" rel = "stylesheet" style="text/css">
     </head>
     
-    <body ng-app = "chapelApp">
+    <body ng-app = "chapelApp" class="container">
         <div ng-controller = "chapelCtrl">
-            <h1>Chapel list</h1>
+            <h2>Chapel list</h2>
             <div>
 				<table class="table table-striped table-bordered">
 				<thead>
@@ -28,7 +28,7 @@
 					<th>Name</th>
 					<th>Date</th>
 					<th>Passage</th>
-                    <th>Attendance</th>
+                    <th>To Read</th>
 				  </tr>
 				</thead>
 				<tbody>
@@ -37,11 +37,30 @@
 					  <td>{{reader.name}}</td>
 					  <td></td>
 					  <td></td>
-                      <td><input type="checkbox"></td>
+                      <td><input type="checkbox" ng-model="reader.hasRead" ng-click="toggleHasRead(reader)" ></td>
 				`</tr>
 				</tbody>
 			  </table>
+				
+			<h2>To Read</h2>
+			<table class="table table-striped table-bordered">
+			<thead>
+			  <tr>
+				<th>Name</th>
+				<th>Date</th>
+				<th>Passage</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat="reader in chapelList" ng-if="reader.hasRead == true">
+				  <td>{{reader.name}}</td>
+				  <td></td>
+				  <td></td>
+			`</tr>
+			</tbody>
+		  </table>
             </div>
+			<button class="btn btn-primary" ng-click="updateChapel()">Save</button>
         </div>
     </body>
 

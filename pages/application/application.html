@@ -36,8 +36,13 @@
 			</script>
 		
 			<form id="application-form" class="simple-form" name="appForm" form ng-controller="formCtrl" novalidate>
+<<<<<<< HEAD
 				<table class="table table-bordered">
 					<tr>
+=======
+				<table class="table">
+					<!--tr>
+>>>>>>> 18798bfc149817503a82d43a3be05c39f6aaf8be
 						<td>
 							<label  class="control-label"> Photo</label>
 						</td>
@@ -104,7 +109,7 @@
 							</div>
 							
 							<div  ng-show = "applicant.religion.toUpperCase() == 'CHRISTIAN'">
-								<label  class = "control-label col-sm-2"> Catholic </label>
+								<label  class = "control-label"> Catholic </label>
 								<input class = "form-control" type = "checkbox" ng-model = "applicant.isCatholic">
 							</div>
 						</td>
@@ -164,7 +169,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<button class = "btn btn-primary" ng-click = 'postForm()'>SUBMIT</button>
+							<button class = "btn btn-primary" ng-click = 'postForm()' ng-disabled = 'appForm.$invalid'>SUBMIT</button>
 						</td>
 					</tr>
 				</table>
