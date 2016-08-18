@@ -4,7 +4,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
 		DECLARATIONS FOR FORM CONTROLLER
 	**************************/
 	
-	// MODEL OBJECT FOR THE APPLICANT FORM 
+	// MODEL OBJECT FOR THE APPLICANT FORM
     $scope.applicant = {
         regNo:"",
         name:"",

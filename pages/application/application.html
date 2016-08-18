@@ -1,6 +1,8 @@
  <html>
     <head>
+        
         <!--VENDOR JS FILES-->
+        
         <script src="/vendor/firebase.js"></script>
 		<script src="/vendor/angular.min.js"></script>
 		<script src="/vendor/angular-messages.min.js"></script>
@@ -40,7 +42,7 @@
 							<label  class="control-label"> Photo</label>
 						</td>
 						<td>
-							<input class="form-control" type="file" required>
+							<input class="form-control" type="file" name="file" id="file" required>
 						</td>
 					</tr>
 					<tr>
@@ -282,5 +284,12 @@
                     <div ng-messages-include = "error-messages"></div>
             </div-->
          </div>
+         
+         <script>
+             var storageRef = firebase.storage().ref();
+             var imageRef = storageRef.child('images/');
+             var uploadTask = storageRef.child(imageRef + file.name).put(file);
+        </script>
+         
     </body>
 </html>
