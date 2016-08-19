@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src = "/vendor/angular.min.js"></script>
+		<link href = "/css/bootstrap.css" style = "text/css" rel = "stylesheet">
+		<script src = "/vendor/firebase.js"></script>
+		
+		<script src = "js/main.js"></script>
+		<script src = "js/services.js"></script>
+		<script src = "js/controllers.js"></script>
+	</head>
+	<body ng-app = "postEditApp">
+		<div ng-controller = "anounCtrl">
+			<input type = "textarea" ng-model = "post.title">
+			<input type = "textarea" ng-model = "post.content">
+			<button ng-click = "submitPost()"> Submit </button>
+		</div>
+	</body>
+	
+</html>
