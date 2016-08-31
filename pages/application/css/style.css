@@ -1,11 +1,6 @@
-.right {
-    float : right;
-    display : block;
-}
-
 input[type=checkbox]{
-    height : 20px;
-    width : 20px;
+    height : 25px;
+    width : 25px;
 }
 
 input.ng-touched.ng-invalid{
@@ -34,4 +29,8 @@ form#application-form table{
 
 form#application-form table tr{
 	padding : 10px;
+}
+
+tr{
+    height: 40px;
 }

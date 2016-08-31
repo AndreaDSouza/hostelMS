@@ -23,20 +23,18 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
             city:"",
             state:"",
             pinCode:"",
-													
+			phNo:"",										
             father:
             {
                 name:"",
                 occupation:"",
-                email:"",
-                mobileNo:"",
+                email:""
             },
             mother:
             {
                 name:"",
                 occupation:"",
-                email:"",
-                mobileNo:"",
+                email:""
             },
             guardian:
             {
@@ -46,7 +44,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
                 address:"",
                 city:"",
                 state:"",
-                mobileNo:"",
+                phNo:""
             }
         }
     };  
