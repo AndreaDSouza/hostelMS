@@ -1,4 +1,37 @@
-<a href = "pages/admin/selection/biodata.html" >Biodata</a>
-<a href = "pages/application/application.html" >Application Form</a>
-<a href = "pages/committees/mess/mess.html" >Mess List</a>
-<a href = "pages/committees/chapel/chapel.html" >Chapel List</a>
+<html>
+	<head>
+		<script src = "vendor/angular.min.js"></script>
+		<link href = "css/bootstrap.css" style = "text/css" rel = "stylesheet">
+		<script src = "/vendor/firebase.js"></script>
+		
+		<script src = "js/main.js"></script>
+		<script src = "js/controllers.js"></script>
+		<script src = "js/services.js"></script>
+	</head>
+	<body ng-app = "dashboardApp">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">HostelApp</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href = "pages/admin/selection/biodata.html" >Biodata</a></li>
+					<li><a href = "pages/application/application.html" >Application Form</a></li> 
+					<li><a href = "pages/committees/mess/mess.html" >Mess List</a></li> 
+					<li><a href = "pages/committees/chapel/chapel.html" >Chapel List</a></li> 
+				</ul>
+			</div>
+		</nav>
+		<h2>Dashboard</h2>
+		<div id = "posts" ng-controller = "dashCtrl">
+            
+			<div class = "panel panel-default" ng-repeat = "post in announcement">
+                <div class = "panel-heading"><h3>{{post.title}}</h3></div>
+                <div class = "panel-body">
+                    <p> {{post.content}}</p></div>
+                <hr>
+            </div>
+		
+		</div>
+	</body>
+</html>
