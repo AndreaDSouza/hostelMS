@@ -4,7 +4,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
 		DECLARATIONS FOR FORM CONTROLLER
 	**************************/
 	
-	// MODEL OBJECT FOR THE APPLICANT FORM 
+	// MODEL OBJECT FOR THE APPLICANT FORM
     $scope.applicant = {
         regNo:"",
         name:"",
@@ -23,20 +23,18 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
             city:"",
             state:"",
             pinCode:"",
-													
+			phNo:"",										
             father:
             {
                 name:"",
                 occupation:"",
-                email:"",
-                mobileNo:"",
+                email:""
             },
             mother:
             {
                 name:"",
                 occupation:"",
-                email:"",
-                mobileNo:"",
+                email:""
             },
             guardian:
             {
@@ -46,7 +44,7 @@ hostelClient.controller('formCtrl',["$scope","$log","dbServices",function($scope
                 address:"",
                 city:"",
                 state:"",
-                mobileNo:"",
+                phNo:""
             }
         }
     };  
