@@ -1,8 +1,12 @@
 <html>
 	<head>
 		<title>Attendance</title>
+		<link href="css/style.css" rel="stylesheet">
 		<link href="/css/bootstrap.css" rel="stylesheet">
 		<script src="/vendor/angular.min.js"></script>
+		
+		
+		<script src="/vendor/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/controllers.js"></script>
 	</head>
@@ -10,7 +14,23 @@
 		<h1>Calendar</h1>
 		<div ng-controller="calCtrl">
 			<div>
-				<h2>{{calendar}}</h2>
+				<div id="month">
+					<h1>September</h1>
+					<table>
+						<tr>
+							<th>Sun</th>
+							<th>Mon</th>
+							<th>Tue</th>
+							<th>Wed</th>
+							<th>Thu</th>
+							<th>Fri</th>
+							<th>Sat</th>
+						</tr>
+						<tr ng-repeat="week in month.weeks">
+							<td ng-repeat="day in week.days" >{{ month.weeks.days[$index] }}</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</body>

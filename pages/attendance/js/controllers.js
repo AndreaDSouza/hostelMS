@@ -1,4 +1,5 @@
 calApp.controller("calCtrl", function($scope){
+	
 	$scope.calendar={
 		months:[
 			{ name:"January",dayCount:31 },
@@ -16,24 +17,43 @@ calApp.controller("calCtrl", function($scope){
 		]
 	};
 	
-	var day = function(){
-		
+	$scope.Day = function(d){
+		this.date = d;
 		this.absentees=[];
 		this.events=[];
-		
 	};
 	
-	$scope.calendar.dayGen = function(month)
-	{
-		this.months[month].days=[]; 
-		for(var i=1; i<this.months[month].dayCount; i++)
+	
+	$scope.calendar.dayGen = function(d)
+	{	
+		var month = d.getMonth();
+		
+		var cal = this;
+		cal.months[month].weeks = new Array();
+		
+		for(var week=0, day = 1; day<=this.months[month].dayCount; week++)
 		{
-			this.months[month].days[i]= new day();
+			cal.months[month].weeks[week] = {};
+			cal.months[month].weeks[week].days = new Array(); 
+			
+			while( d.getDay() <= 6 && day<=this.months[month].dayCount )
+			{
+				d.setDate(day);
+				var newDate = new Date(d);
+				cal.months[month].weeks[week].days[day]= new $scope.Day( d );	
+				day++;
+				
+				if( d.getDay() == 6 )
+					break;
+			}
 		}
 	};
 	
 	var d = new Date();
-	calendar.dayGen(d.getMonth());
-	console.log(calendar);
-});
+	d.setDate(1);
+	$scope.calendar.dayGen(d);
+	
+	$scope.month = $scope.calendar.months[d.getMonth()];
+	console.log($scope.month);
 
+});
