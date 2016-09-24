@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/pages/home/css/home.css">
+
+<div class="to-center" ng-controller="home">
+
+    <!-- signin form box -->
+    <div id="login-box" class="in-box" ng-class="{ loggedIn : user.foundPassword }">
+        <div id="profile-image">
+            <img src="/pages/home/images/users/user.jpeg">
+        </div>
+        <form>
+
+            <div class="form-group" ng-show="!user.foundUserName">
+                <input type="text" class="form-control" placeholder="User Name" ng-model="user.name">
+                <button type="submit" class="btn" ng-click="user.checkUserName()">Sign-in</button>
+                <button type="submit" class="btn">Apply</button>
+            </div>
+
+            <div class="form-group" ng-show="user.foundUserName">
+                <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+                <button type="submit" class="btn" ng-click="user.checkPassword()">Login</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- announcement box -->
+    <div id="announcement-box" class="in-box">
+        <div ng-repeat="item in items">
+            <h4 class="title">{{item.title}}</h4>
+            <p class="content">{{item.content}}</p>
+        </div>
+    </div>
+
+</div>

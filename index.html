@@ -1,37 +1,32 @@
-<html>
+<html ng-app="myApp">
 	<head>
+		<!-- JS Angular files -->
 		<script src="/vendor/angular.min.js"></script>
-		<link href="/css/bootstrap.css" rel="stylesheet">
+		<script src="/vendor/angular-cookies.min.js"></script>
+		<script src="/vendor/angular-route.min.js"></script>
+		<script src="/vendor/angular-messages.min.js"></script>
 		<script src="/vendor/firebase.js"></script>
-		
+		<!-- JS Bootstrap files -->
+		<script src="/vendor/jquery.min.js"></script>
+		<script src="/vendor/bootstrap.min.js"></script>
+
+		<!-- JS files -->
 		<script src = "js/main.js"></script>
-		<script src = "js/controllers.js"></script>
-		<script src = "js/services.js"></script>
+
+		<!-- CSS vendor files -->
+		<link href="/css/normalize.css" rel="stylesheet">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+
+		<!-- CSS files -->
+		<link rel="stylesheet" href="/css/general.css">
+
+		<!-- Home Page JS files -->
+		<script src = "/pages/home/js/controllers.js"></script>
+		<script src = "/pages/home/js/services.js"></script>
 	</head>
-	<body ng-app = "dashboardApp">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">HostelApp</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li><a href = "pages/admin/selection/biodata.html" >Biodata</a></li>
-					<li><a href = "pages/application/application.html" >Application Form</a></li> 
-					<li><a href = "pages/committees/mess/mess.html" >Mess List</a></li> 
-					<li><a href = "pages/committees/chapel/chapel.html" >Chapel List</a></li> 
-				</ul>
-			</div>
-		</nav>
-		<h2>Dashboard</h2>
-		<div id = "posts" ng-controller = "dashCtrl">
-            
-			<div class = "panel panel-default" ng-repeat = "post in announcement">
-                <div class = "panel-heading"><h3>{{post.title}}</h3></div>
-                <div class = "panel-body">
-                    <p> {{post.content}}</p></div>
-                <hr>
-            </div>
-		
-		</div>
-	</body>
+
+	<body ng-view>
+    </body>
+
+	<script src="http://localhost:35729/livereload.js">
 </html>

@@ -1,0 +1,11 @@
+{
+    "arfath" : {
+        "password" : "nida",
+        "type" : "student"
+    },
+
+    "paul" : {
+        "password" : "nada",
+        "admin" : "admin"
+    }
+}

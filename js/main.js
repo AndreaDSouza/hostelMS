@@ -1,1 +1,1 @@
-var dashboardApp = angular.module("dashboardApp",[]);
+myApp = angular.module( 'myApp', ['ngRoute', 'ngCookies'] );
